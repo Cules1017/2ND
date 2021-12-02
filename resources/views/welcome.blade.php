@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="{{ URL::asset('css/reset.css');}}">
     <link rel="stylesheet" href="{{ URL::asset('css/base.css');}}">
     <link rel="stylesheet" href="{{ URL::asset('css/Post_page.css');}}">
+    <link rel="stylesheet" href="{{ URL::asset('css/home_page.css');}}">
 </head>
 @extends('layouts.app')
 @section('content')
@@ -22,62 +23,62 @@
                     <li class="category-item">
                         <a href="" class="category-item-link">
                         
-                            <img src="{{ URL::asset('imgages/category/thoitrang.png');}}" class="category-item-link-icon" alt=""> Thời trang
+                            <img src="{{ URL::asset('img\category\thoitrang.png');}}" class="category-item-link-icon" alt=""> Thời trang
                         </a>
                     </li>
                     <li class="category-item">
                         <a href="" class="category-item-link">
-                            <img src="./assets/img/category/mobile.png" alt="" class="category-item-link-icon"> Điện thoại
+                            <img src="{{ URL::asset('img\category\mobile.png');}}" alt="" class="category-item-link-icon"> Điện thoại
                         </a>
                     </li>
                     <li class="category-item">
                         <a href="" class="category-item-link">
-                            <img src="./assets/img/category/xe.png" alt="" class="category-item-link-icon"> Xe
+                            <img src="{{ URL::asset('img\category\xe.png');}}" alt="" class="category-item-link-icon"> Xe
                         </a>
                     </li>
                     <li class="category-item">
                         <a href="" class="category-item-link">
-                            <img src="./assets/img/category/do-gia-dung.png" class="category-item-link-icon" alt=""> Đồ gia dụng
+                            <img src="{{ URL::asset('img\category\do-gia-dung.png');}}" class="category-item-link-icon" alt=""> Đồ gia dụng
                         </a>
                     </li>
                     <li class="category-item">
                         <a href="" class="category-item-link">
-                            <img src="./assets/img/category/noithat.png" alt="" class="category-item-link-icon"> Nội thất
+                            <img src="{{ URL::asset('img\category\noithat.png');}}" alt="" class="category-item-link-icon"> Nội thất
                         </a>
                     </li>
                     <li class="category-item">
                         <a href="" class="category-item-link">
-                            <img src="./assets/img/category/nha-dat.png" alt="" class="category-item-link-icon"> Nhà đất
+                            <img src="{{ URL::asset('img\category\nha-dat.png');}}" alt="" class="category-item-link-icon"> Nhà đất
                         </a>
                     </li>
                     <li class="category-item">
                         <a href="" class="category-item-link">
-                            <img src="./assets/img/category/nong-nghiep.png" class="category-item-link-icon" alt=""> Nông nghiệp
+                            <img src="{{ URL::asset('img\category\nong-nghiep.png');}}" class="category-item-link-icon" alt=""> Nông nghiệp
                         </a>
                     </li>
                     <li class="category-item">
                         <a href="" class="category-item-link">
-                            <img src="./assets/img/category/do-cn.png" alt="" class="category-item-link-icon"> Đồ công nghệ
+                            <img src="{{ URL::asset('img\category\do-cn.png');}}" alt="" class="category-item-link-icon"> Đồ công nghệ
                         </a>
                     </li>
                     <li class="category-item">
                         <a href="" class="category-item-link">
-                            <img src="./assets/img/category/so-thich.png" alt="" class="category-item-link-icon"> Sở thích
+                            <img src="{{ URL::asset('img\category\so-thich.png');}}" alt="" class="category-item-link-icon"> Sở thích
                         </a>
                     </li>
                     <li class="category-item">
                         <a href="" class="category-item-link">
-                            <img src="./assets/img/category/thu-cung.png" class="category-item-link-icon" alt=""> Thú cưng
+                            <img src="{{ URL::asset('img\category\thu-cung.png');}}" class="category-item-link-icon" alt=""> Thú cưng
                         </a>
                     </li>
                     <li class="category-item">
                         <a href="" class="category-item-link">
-                            <img src="./assets/img/category/thethao.png" alt="" class="category-item-link-icon"> Thể thao
+                            <img src="{{ URL::asset('img\category\thethao.png');}}" alt="" class="category-item-link-icon"> Thể thao
                         </a>
                     </li>
                     <li class="category-item">
                         <a href="" class="category-item-link">
-                            <img src="./assets/img/category/free_0d.png" alt="" class="category-item-link-icon"> Hàng 0 đồng
+                            <img src="{{ URL::asset('img\category\free_0d.png');}}" alt="" class="category-item-link-icon"> Hàng 0 đồng
                         </a>
                     </li>
                 </ul>

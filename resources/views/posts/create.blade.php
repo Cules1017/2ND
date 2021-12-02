@@ -16,14 +16,14 @@
 
     <div class="container">
         <div class="grid">
-            <div class="grid__row">
+           <div class="grid__row">
                 <div class="grid__column-1">
                 </div>
-                <div class="grid__column-9">
+                <div class="grid__column-10">
                     <div class="infor_product">
                         
 
-                        <form action="/post/store" enctype="multipart/form-data"  method="POST">
+                        <form action="/post/store" enctype="multipart/form-data" id="form_post_product" method="POST">
                              @csrf              
                 
                             <div class="grid__row">
@@ -87,11 +87,12 @@
                                                 <option value="Thu cung">Thú cưng</option>
                                                 <option value="Hang 0 đong">Hàng 0 đồng</option>
                                             </select>
-                                            @if ($errors->has('category'))
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('category') }}</strong>
+                                            <span class="valid_err_text">
+                                             
                                             </span>
-                                             @endif
+                                            <span class="invalid-feedback">
+                                            </span>
+                                           
                                         </div>
                                         <div class="infor_product-category-ali">
                                             <div class="tilte-selects">Tiêu đề cho sản phẩm:<span class="Obligatory">*</span></div>
@@ -100,11 +101,9 @@
                                             value="{{ old('title') }}"
                                             autocomplete="title" autofocus>
                                             <span class="valid_err_text"></span>
-                                            @if ($errors->has('title'))
-                                            <span class="valid_err_text" role="alert">
-                                                <strong>{{ $errors->first('title') }}</strong>
-                                            </span>
-                                             @endif
+                                            
+                                            
+                                             
                                          </div>
 
 
@@ -117,11 +116,10 @@
                                             autocomplete="price" autofocus>
                                             <label for="Price_product" class="Label_unit">VND</label>
 
-                                            @if ($errors->has('price'))
-                                            <span class="valid_err_text" role="alert">
-                                                <strong>{{ $errors->first('price') }}</strong>
+                                           
+                                            <span class="valid_err_text">
                                             </span>
-                                             @endif
+                                          
                                         </div>
                                         <!-- <div class="infor_product-category-ali">
                                             <div class="tilte-selects">Tình trạng sản phẩm:<span class="Obligatory">*</span></div>
@@ -130,7 +128,7 @@
                                         </div>-->
                                         <div class="infor_product-category-ali">
                                             <div class="tilte-selects">Mô tả chi tiết:<span class="Obligatory">*</span></div>
-                                            <textarea class="infor_product-category-ali-select" inputmode="text" id="description" name="description" placeholder="Viết tiếng Việt có dấu
+                                            <textarea class="infor_product-category-ali-select" inputmode="text" id="Decrip_product"id="description" name="description" placeholder="Viết tiếng Việt có dấu
                                                 - Xuất sứ
                                                 - Nhãn hiệu
                                                 - Chất liệu, kích thước
@@ -141,11 +139,8 @@
                                             value="{{ old('description') }}"
                                             autocomplete="description" autofocus></textarea>
                                             <span class="valid_err_text"></span>
-                                            @if ($errors->has('description'))
                                             <span class="valid_err_text" role="alert">
-                                                <strong>{{ $errors->first('description') }}</strong>
                                             </span>
-                                             @endif
                                         </div>
                                     </div>
                                     <div class="infor_product-export">
@@ -231,21 +226,21 @@
 
     }
 </script>
-<script src="./assets/java/img_upload.js"></script>
-<script>
+<script src="{{asset('js\img_upload.js');}}"></script>
+<script type="text/javascript">
     Validator({
         form: '#form_post_product',
         errSelector: '.valid_err_text',
         rules: [
-            Validator.isValue('#select__category'),
-            Validator.isValue('#Name_product'),
-            Validator.isValue('#Price_product'),
-            Validator.isMoney('#Price_product'),
+            Validator.isValue('#category'),
+            Validator.isValue('#title'),
+            Validator.isValue('#price'),
+            Validator.isMoney('#price'),
             /*Validator.isValue('#Status_product'),*/
             Validator.isValue('#Decrip_product'),
         ],
         Onsubmit: function(data) {
-            console.log(data);
+            alert('data');
         }
     });
 </script>

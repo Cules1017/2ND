@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="{{ URL::asset('fonts\themify-icons\themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('fonts\themify-icons\themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('css\reset.css');}}">
+    <link rel="stylesheet" href="{{ asset('css\base.css');}}">
     <link rel="stylesheet" href="{{ asset('css\header-footer.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('css\home_page.css');}}">
+ 
+   <!--  <link rel="stylesheet" href="{{ URL::asset('css\home_page.css');}}">-->
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="{{ asset('js/app.js') }}" defer></script> -->
     <style>
@@ -155,14 +158,14 @@
                     </nav>
 
                     <div class="header-with-search">
-                    <form action="/search" method="GET" role="search">
+                    <form action="/search" method="GET" role="search" class="header__seacrh">
                         @csrf
-                        <div class="header__seacrh">
+                        <!--<div class="header__seacrh">-->
                             <div class="header__seacrh-input-wrap">
                             
                            
                                 <input type="text" class="header__seacrh-input" placeholder="Tìm Kiếm Sản Phẩm" name="q">
-                                <div class="header__search-history">
+                               <div class="header__search-history">
                                     <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
                                     <ul class="header__search-history-list">
                                         <li class="header__search-history-item">
@@ -181,8 +184,8 @@
                             <a href="" class="header__seacrh-btn">
                                 <i class="header__seacrh-btn-icon ti-search"></i>
                             </a>
-                            <!-- <button type="submit" class="header__seacrh-btn"> -->
-                        </div>
+                            <!-- <button type="submit" class="header__seacrh-btn">
+                        </div> -->
                     </form>
                         @guest
                         <div class="header__user">
