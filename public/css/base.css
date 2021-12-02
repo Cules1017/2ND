@@ -1,0 +1,191 @@
+       :root {
+          --white-color: #ffff;
+          --milk-color: #F7F7F7;
+          --grayish-color: #52616B;
+          --graydark-color: #1B2023;
+          --black-color: #000;
+          --text-color: #333;
+      }
+      
+      * {
+          box-sizing: inherit;
+      }
+      
+      html {
+          font-size: 62.5%;
+          line-height: 1.6rem;
+          font-family: 'Roboto', sans-serif;
+          box-sizing: border-box;
+          scroll-behavior: smooth;
+      }
+      
+      .grid {
+          width: 1200px;
+          max-width: 100%;
+          margin: 0 auto;
+      }
+      
+      .grid__full-width {
+          width: 100%;
+      }
+      /*<<<<<<< HEAD*/
+      
+      .grid__row {
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: -5px;
+          margin-right: -5px;
+      }
+      /*=======*/
+      
+      .grid {
+          width: 1200px;
+          max-width: 100%;
+          margin: 0 auto;
+          /*>>>>>>> 8cd49184239d5951480d450e320006ac986b19bd*/
+      }
+      /*Test*/
+      
+      .grid__column-2 {
+          padding-left: 5px;
+          padding-right: 5px;
+          width: 16.6667%;
+      }
+      
+      .grid__column-8 {
+          padding-left: 5px;
+          padding-right: 5px;
+          width: 66.6667%;
+      }
+      /*<<<<<<< HEAD*/
+      
+      .grid__column-10 {
+          padding-left: 5px;
+          padding-right: 5px;
+          width: 83.3333%;
+      }
+      
+      .grid__column-1 {
+          padding-left: 5px;
+          padding-right: 5px;
+          width: 8.3333%;
+      }
+      /*=======*/
+      /*Test*/
+      
+      .grid__column-2 {
+          padding-left: 12px;
+          padding-right: 12px;
+          width: 16.6667%;
+      }
+      
+      .grid__column-8 {
+          padding-left: 12px;
+          padding-right: 12px;
+          width: 66.6667%;
+      }
+      
+      .grid__column-5 {
+          padding-left: 12px;
+          padding-right: 12px;
+          width: 33.3334%;
+      }
+      
+      .grid__column-10 {
+          padding-left: 12px;
+          padding-right: 12px;
+          width: 83.3333%;
+      }
+      
+      .grid__column-1 {
+          padding-left: 12px;
+          padding-right: 12px;
+          width: 8.3333%;
+      }
+      
+      .grid__column-4 {
+          padding-left: 12px;
+          padding-right: 12px;
+          width: 33.3333%;
+      }
+      
+      .grid__column-6 {
+          padding-left: 12px;
+          padding-right: 12px;
+          width: 50%;
+      }
+      
+      .grid__column-2-4 {
+          padding-left: 5px;
+          padding-right: 5px;
+          width: 20%;
+      }
+      
+      .grid__column-3of10 {
+          padding-left: 5px;
+          padding-right: 5px;
+          width: 30%;
+      }
+      
+      .grid__column-7of10 {
+          padding-left: 5px;
+          padding-right: 5px;
+          width: 70%;
+          /*>>>>>>> 8cd49184239d5951480d450e320006ac986b19bd*/
+      }
+      
+      .grid__column-5 {
+          padding-left: 5px;
+          padding-right: 5px;
+          width: 100%;
+      }
+      
+      .grid__column-2-4 {
+          padding-left: 5px;
+          padding-right: 5px;
+          width: 20%;
+      }
+      
+      .grid__column-3of10 {
+          padding-left: 5px;
+          padding-right: 5px;
+          width: 30%;
+      }
+      
+      .grid__column-7of10 {
+          padding-left: 5px;
+          padding-right: 5px;
+          width: 70%;
+      }
+      /***********SCROLL***************/
+      /* width */
+      
+       ::-webkit-scrollbar {
+          width: 10px;
+      }
+      /* Track */
+      
+       ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+      }
+      /* Handle */
+      
+       ::-webkit-scrollbar-thumb {
+          background: #888;
+      }
+      /* Handle on hover */
+      
+       ::-webkit-scrollbar-thumb:hover {
+          background: #555;
+      }
+      /***********************TRIGGER*****************************************/
+      
+      .valid_err {
+          border: red 1px solid;
+      }
+      
+      .valid_err_text {
+          font-weight: 200;
+          font-size: 1.4rem;
+          color: red;
+      }

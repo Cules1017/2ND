@@ -1,0 +1,169 @@
+.container {
+    background-image: linear-gradient(#1B2023, #52616B);
+    margin-top: 130px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.user_setting {
+    background-color: white;
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.user_setting-title {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 40px;
+    background-color: var(--grayish-color);
+    display: flex;
+}
+
+.user_setting-title>h3 {
+    color: var(--milk-color);
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin: auto;
+    letter-spacing: 1px;
+}
+
+.user_input {
+    display: flex;
+}
+
+.user_input-img {
+    flex: 1;
+    display: flex;
+}
+
+.sub-title {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 20px;
+    font-style: 1.4rem;
+}
+
+.Plus-img {
+    position: absolute;
+    font-size: 8rem;
+    font-weight: 500;
+    top: 87px;
+    left: 78px;
+    -webkit-user-select: none!important;
+}
+
+#selected-img {
+    position: relative;
+    margin: auto;
+}
+
+#selected-img input {}
+
+.input-img_ac {
+    width: 200px;
+    height: 200px;
+    color: white;
+}
+
+.bug {
+    position: absolute;
+    width: 57px;
+    height: 20px;
+    background-color: white;
+}
+
+.displayIMG>img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    flex: 1;
+    margin: auto;
+}
+
+#selected-img {
+    width: 200px;
+    height: 200px;
+    border: 2px #999 dashed;
+}
+
+.user_input-many {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+}
+
+.user_upload-img {
+    position: absolute;
+    width: 45px;
+    background-color: rgb(59, 56, 56);
+    border-radius: 100px;
+    float: left;
+    top: 1px;
+    padding-left: 6px;
+}
+
+.user_upload-img:hover {
+    background-color: #999;
+    color: var(--text-color);
+}
+
+.user_upload-img-icon:hover {
+    color: var(--text-color);
+}
+
+.user_upload-img-icon {
+    font-size: 3rem;
+    color: var(--milk-color);
+}
+
+.show {
+    display: block;
+    float: left;
+}
+
+input #file-upload-button {
+    color: white;
+    background-color: white;
+}
+
+
+/***********phần nhập*******************/
+
+.user_input-selected-in {
+    width: 100%;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+}
+
+.user_input-selected-in input {
+    width: 100%;
+    margin-top: 6px;
+    padding: 8px;
+}
+
+.tile_selected {
+    padding-top: 8px;
+}
+
+.user_input-export-btn-text {
+    float: right;
+    margin-top: 10px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    width: 124px;
+    height: 40px;
+    background-color: var(--grayish-color);
+    border-radius: 5px;
+    color: var(--milk-color);
+}
+
+.user_input-export-btn-text:hover {
+    background-color: #999;
+    color: var(--text-color);
+    border-radius: 5px;
+}

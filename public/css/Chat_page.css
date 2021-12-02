@@ -1,0 +1,225 @@
+
+.container {
+  margin-top: 130px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.container__boxchat{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    justify-content: space-around;
+    margin-top: 10px;
+    background-color: var(--grayish-color);
+    border-radius: 5px;
+}
+.people-list {
+  width:100%;
+  flex: 1;
+  float: left;
+  overflow: auto;
+}
+.people-list ul{
+    list-style: none;
+    padding: 0;
+}
+.people-list__title,
+.chat-header{
+    display: flex;
+    height: 50px;
+    background-color: var(--graydark-color);
+    position: fixed;
+}
+.people-list__title{
+  width: 333px;
+  border-top-left-radius: 5px;
+}
+.people-list__title>h2{
+    font-size: 1.6rem;
+    color: var(--milk-color);
+    margin: auto;
+    letter-spacing: 2px;
+    font-weight: 500;
+    
+}
+.online{
+  color: aqua;
+}
+/*******List chat************/
+.people-list .list{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.people-list .item{
+    display: flex;
+    padding: 10px 5px 10px 20px;
+    border-bottom: 1px var(--text-color) solid;
+}
+.people-list .item:hover{
+    background-color: #999;
+}
+.people-list .item img{
+    border-radius: 100px;
+    padding-right: 8px;
+}
+.people-list .item .about .name{
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 5px 0 8px 10px;
+    
+}
+.people-list .item .about .status{
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 5px 0 8px 10px;
+    
+}
+/*************************chat*****************/
+.chat{
+  flex: 2;
+  background-color:#efefef;
+  display: flex;
+  flex-direction: column;
+}
+.chat-header{
+    width: 665px;
+    border-top-right-radius: 5px;
+
+}
+.chat-header img{
+  border-radius: 100px;
+  margin-left: 20px;
+}
+.chat-about{
+  display: flex;
+}
+.chat-about .chat-with,
+.chat-phonenum{
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--milk-color);
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 20px;
+}
+.chat-phonenum{
+  padding-left:  283px;
+  color: #999;
+  font-size: 1.4rem;
+}
+.chat-history{
+    margin-top: 50px;
+    flex: 1;
+}
+.chat-message{
+    height: 40px;
+}
+/****************KHUNG CHAT******************/
+.chat-history ul{
+  padding: 0;
+  list-style: none;
+}
+.message-data{
+  position: relative;
+}
+.message-data-time{
+  display: none;
+  position: absolute;
+}
+.align-right,
+.float-right{
+  float:right ;
+}
+.align-left{
+  float: left;
+}
+
+.message{
+  display: block;
+  padding: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.other-message{
+  background-color: rgb(12, 103, 223);
+}
+ /* 
+  .chat-message {
+    padding: 30px;
+    
+    textarea {
+      width: 100%;
+      border: none;
+      padding: 10px 20px;
+      font: 14px/22px "Lato", Arial, sans-serif;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      resize: none;
+      
+    }
+    
+    .fa-file-o, .fa-file-image-o {
+      font-size: 16px;
+      color: gray;
+      cursor: pointer;
+      
+    }
+    
+    button {
+      float: right;
+      color: $blue;
+      font-size: 16px;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      background: #F2F5F8;
+      
+      &:hover {
+        color: darken($blue, 7%);
+      }
+    }
+  }
+}
+
+.online, .offline, .me {
+    margin-right: 3px;
+    font-size: 10px;
+  }
+  
+.online {
+  color: $green;
+}
+  
+.offline {
+  color: $orange;
+}
+
+.me {
+  color: $blue;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.float-right {
+  float: right;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+View Compiled*/

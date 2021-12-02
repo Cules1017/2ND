@@ -1,0 +1,287 @@
+.header-image{
+    width: 200px;
+    height:80px;
+}
+
+.header-title{
+    display:inline-block;
+    margin-left: 25px;
+    font-size: 3rem;
+    
+}
+.contain{
+    width: 100%;
+    height: 550px;
+    background-color: var(--grayish-color);
+
+}
+
+.logo-box{
+    width:50%;
+    height:500px;
+    background-color:var(--grayish-color);
+    display: block;
+    position: relative;
+    float: left;
+}
+
+.contain-image{
+    display: block;
+    align-items: center;
+    
+    margin-left: auto; 
+    margin-right: auto;
+    width:60%;
+    height:30%;
+    position:absolute ;
+    top: 90px;
+    left:100px;
+    right:100px;
+}
+
+.contain-title{
+    font-size: 3rem;
+    display: flex ;
+    align-items: center;
+    position:absolute ;
+    top: 270px;
+    
+    right:100px;
+}
+
+.form-box{
+    width:50%;
+    height: 500px;
+    position: relative;
+    float:right;
+}
+
+.form-box-box{
+    border-radius: 3px;
+    height: 512px;
+    width: 350px;
+    background-color: white;
+    position: absolute;
+    top:20px;
+    left:0px;
+}
+
+.login-register-title{
+    margin-top:35px; 
+    margin-left: 25px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+
+.login-register-info{
+    border-radius: 3px;
+    margin-bottom: 20px;
+    width: 300px;
+    height: 34px;
+    color: black;
+    position: relative;
+}
+
+.form-message{
+    display: block;
+    font-size: 12px;
+    color: red;
+    position: absolute;
+    left: 26px;
+}
+/*Phan css cua register :BEGIN*/
+#form-message-email{
+    position: absolute;
+    top: 115px ;
+}
+
+#form-message-name{
+    position: absolute;
+    top: 168px ;
+}
+
+#form-message-phone{
+    position: absolute;
+    top: 223px ;
+}
+#form-message-pass{
+    position: absolute;
+    top: 276px ;
+}
+#form-message-repass{
+    position: absolute;
+    top: 331px ;
+}
+::placeholder{
+    opacity: 0.5;
+}
+
+
+.eye-icon1{
+    font-size: 2rem;
+    height: 31px;
+    width: 30px;
+    position: absolute;
+    top: 249px;
+    right: 28px;
+}
+
+.eye-icon2{
+    font-size: 2rem;
+    height: 31px;
+    width: 30px;
+    position: absolute;
+    top: 302px;
+    right: 28px;
+}
+
+.register-button:hover{
+   
+    background-color: var(--grayish-color);
+}
+
+.register-button{
+    display: inline-block;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    border-radius: 3px;
+    width: 330px;
+    height: 36px;
+    background-color:var(--graydark-color);
+    color:white;
+    position: absolute ;
+    left:10px;
+    font-weight: 700;
+}
+
+h5 {
+    opacity: 0.5;
+    width: 300px; 
+    text-align: center; 
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+    margin-left: 25px; ;
+ } 
+ 
+ h5 span { 
+     background:#fff; 
+     padding:0 10px; 
+ }
+
+.button-facebook{
+    border-radius: 2px;
+    width: 90px;
+    height: 38px;
+    background-color: rgb(84, 84, 202);
+    position: absolute;
+    left:80px;
+    bottom: 54px;
+
+}
+
+.button-google{
+    border-radius: 2px;
+    width: 78px;
+    height: 38px;
+    background-color: rgb(84, 84, 202);
+    position: absolute;
+    right:90px;
+    bottom: 54px;
+}
+
+.button-facebook:hover{
+    background-color: var(--grayish-color);
+
+}
+
+.button-google:hover{
+    background-color: var(--grayish-color);
+
+}
+
+.button-link{
+    margin-top: 6.6px;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    color:white;
+    text-decoration: none;
+}
+
+.button-link-icon-face{
+    font-size: 2.5rem;
+    color:var(--white-color);
+}
+
+.button-link-icon-gg{
+    margin-left: 6px;
+    font-size: 2.5rem;
+    color:var(--white-color);
+}
+
+.login{
+    margin-top: 30px;
+    
+}
+.login-button{
+    color: blue;
+    display: inline;
+}
+
+/*Kết thuc phan css cua register : END*/
+/*FOOTER*/
+.footer{
+    margin-top: 0px;
+    margin-bottom: 30px;
+    height: 100px;
+    width: 100%;
+}
+
+.footer-icon{
+    margin-top: 16px;
+    margin-left: 24px;
+    opacity: 0.8;
+}
+
+.footer-icon-box{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.footer-icon-box:hover{
+    
+    background-color: rgb(0, 0, 0);
+}
+
+.footer-link{
+    text-decoration: none;
+    color:var(--grayish-color);
+    
+}
+
+.footer-button{
+    
+    color: var(--grayish-color);
+    margin-top: 8px;
+    margin-left: 0px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-button:hover{
+    color:white; 
+}
+
+.footer-bottom{
+    font-size: 14px;
+    opacity: 0.8;
+    text-decoration: none;
+    color: var(--grayish-color);
+}

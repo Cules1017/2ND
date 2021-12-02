@@ -1,0 +1,17 @@
+.grid{
+    background-color: coral;
+}
+.A{
+    height: 60px;
+    background-color: red;
+}
+
+.B{
+    height: 60px;
+    background-color: aqua;
+}
+
+.C{
+    height: 60px;
+    background-color: chartreuse;
+}
