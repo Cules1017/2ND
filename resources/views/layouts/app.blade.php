@@ -101,7 +101,7 @@
                                             $images = explode('|', $post->image);
                                         @endphp
                                         <li class="header__notify-item header__notify-item--viewed">
-                                            <a href="p/{{auth()->user()->following->first()->user->posts->first()->id}}" class="header__notify-link">
+                                            <a href="/p/{{$post->id}}" class="header__notify-link">
                                                        
                                                 <img src="{{URL::to ($images[0])}}" alt="" class="header__notify-img">
                                                 <div class="header__notify-info">
