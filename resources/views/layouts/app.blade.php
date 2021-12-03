@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css\reset.css');}}">
     <link rel="stylesheet" href="{{ asset('css\base.css');}}">
     <link rel="stylesheet" href="{{ asset('css\header-footer.css'); }}">
-    <script> window.csrfToken = document.querySelector('meta[name="csrf-token"]').content;</script>
+    
    <!--  <link rel="stylesheet" href="{{ URL::asset('css\home_page.css');}}">-->
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet">-->
     <script src="{{ asset('js/app.js') }}" defer></script>

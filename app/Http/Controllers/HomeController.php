@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('created_at', 'desc')->take(10)->get();
+        $posts = Post::orderBy('id', 'DESC')->take(10)->get();
         return view('welcome', compact('posts'));
     }
     public function search(){
@@ -31,11 +31,11 @@ class HomeController extends Controller
         
           $q = Request::get('q');
           if($q){
-                $posts = Post::where('description','like','%'.$q.'%')->orWhere('title','like','%'.$q.'%')->paginate(10);
+                $posts = Post::where('category','like','%'.$q.'%')->orWhere('title','like','%'.$q.'%')->orderBy('id', 'desc')->paginate(10);
                 return view('posts.search' , compact('posts',  'q'));}
          else   {
              $q=" ";
-                    $posts = Post::orderBy('created_at', 'desc')->take(20)->get();
+                    $posts = Post::orderBy('id', 'desc')->take(20)->get();
                     return view('posts.search', compact('posts', 'q'));}
     }
         public function searchbyprice(){
@@ -45,11 +45,11 @@ class HomeController extends Controller
             $max_price=Request::get('price');
             $min_price=$max_price-1000000;
             if($q){
-            $posts = Post::where('title','like','%'.$q.'%')->whereBetween('price', [$min_price, $max_price])->paginate(10);
+            $posts = Post::where('title','like','%'.$q.'%')->orWhere('category','like','%'.$q.'%')->whereBetween('price', [$min_price, $max_price])->orderBy('id', 'desc')->paginate(10);
             return view('posts.search' , compact('posts' ,  'q'));}
             else{
                 $q=" ";
-                $posts = Post::whereBetween('price', [$min_price, $max_price])->paginate(10);
+                $posts = Post::whereBetween('price', [$min_price, $max_price])->orderBy('id', 'desc')->paginate(10);
                 return view('posts.search' , compact('posts', 'q'));}
             }
     
