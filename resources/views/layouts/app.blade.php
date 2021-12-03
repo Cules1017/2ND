@@ -88,21 +88,31 @@
                                     báo</a>
                                 <div class="header__notify">
                                     <header class="header__notify-header">
-                                        <h3>Thông Báo Vừa Nhận</h3>
+                                        <h3>Thông Báo Mới Nhất</h3>
                                     </header>
                                     <ul class="header__notify-list">
+                                    @php
+                                        $users = auth()->user()->following()->pluck('profiles.user_id');
+                                        
+                                        $posts = \App\Models\Post::whereIn('user_id', $users)->orderBy('id', 'DESC')->take(3)->get();
+                                    @endphp
+                                    @foreach($posts as $post)
+                                        @php
+                                            $images = explode('|', $post->image);
+                                        @endphp
                                         <li class="header__notify-item header__notify-item--viewed">
-                                            <a href="" class="header__notify-link">
-                                                <img src="./assets/img/img-tt/hondacrv.jpg" alt="" class="header__notify-img">
+                                            <a href="p/{{auth()->user()->following->first()->user->posts->first()->id}}" class="header__notify-link">
+                                                       
+                                                <img src="{{URL::to ($images[0])}}" alt="" class="header__notify-img">
                                                 <div class="header__notify-info">
-                                                    <span class="header__notify-name">Xe Honda CRV</span>
-                                                    <span class="header__notify-decrip">Khi giới hạn không thể ngăn lối
-                                                        thành công, cùng Honda CR-V đánh thức và cảm nhận mọi giác quan
-                                                        trong bạn để chạm đến đỉnh vinh quang. </span>
+                                                      
+                                                    <span class="header__notify-name">{{$post->title}}</span>
+                                                    <span class="header__notify-decrip">{!! nl2br(e($post->description));!!}</span>
                                                 </div>
                                             </a>
                                         </li>
-                                        <li class="header__notify-item">
+                                    @endforeach
+                                        <!-- <li class="header__notify-item">
                                             <a href="" class="header__notify-link">
                                                 <img src="./assets/img/img-tt/hondacrv.jpg" alt="" class="header__notify-img">
                                                 <div class="header__notify-info">
@@ -123,7 +133,7 @@
                                     </ul>
                                     <footer class="header__notify-footer">
                                         <a href="" class="header__notify-footer-btn">Xem tất cả</a>
-                                    </footer>
+                                    </footer> -->
                                 </div>
                             </li>
                             <li class="header__navbar-item header__navbar-item--has-more">
