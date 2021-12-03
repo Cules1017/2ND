@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ URL::asset('css\base.css');}}">
     <link rel="stylesheet" href="{{ URL::asset('css\register.css');}}"> 
     <link rel="stylesheet" href="./fonts/themify-icons/themify-icons.css">
-    
+    <script src="./js/login-register.js" defer></script>
         <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <script src="{{ asset('js/app.js') }}" defer></script> -->
 
@@ -45,50 +45,56 @@
                                 <div class="form-group">
                                     <input class="login-register-info @error('email') is-invalid @enderror"  id="email" type="text" placeholder="Email" name="email"  
                                     value="{{ old('email') }}"  autocomplete="email" autofocus> 
-                                    <!-- <span class="form-message" id="form-message-email"></span> -->
+                                    @error('email')
+                                    <span class="form-message" id="form-message-name" role="alert">
+                                        <strong>email đã được sử dụng hoặc chưa chính xác</strong>
+                                    </span>
+                                     @enderror
+                                     
 
                                 </div>
-                                @error('email')
+                                <!-- @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
+                                @enderror -->
                                 <div class="form-group">
                                     <input class="login-register-info" id="name" type="text" placeholder="Họ và Tên" name="name"
                                     value="{{ old('name') }}" autocomplete="name" autofocus
                                     >
-                                    <!-- <span class="form-message" id="form-message-name"></span> -->
-                                    
-                                </div>
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                 @error('name')
+                                    <span class="form-message" id="form-message-name" role="alert">
+                                        <strong>chưa điền họ tên kìa</strong>
                                     </span>
                                 @enderror
+                                    
+                                    
+                                </div>
+
                                 <div class="form-group">
                                     <input class="login-register-info" id="phone" type="text" placeholder="Số điện thoại" name="phone"
                                     value="{{ old('phone') }}" autocomplete="email" autofocus>
                                     <span class="form-message" id="form-message-phone"></span> 
                                     
                                 </div>
-                                @error('phone')
+                                <!-- @error('phone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
+                                @enderror -->
                                 <div class="form-group">
                                     <input class="login-register-info" id="password" type="password" name="password" autocomplete="new-password" placeholder="Nhập mật khẩu ( có ít nhất 8 kí tự )">
-                                    <!-- <span class="form-message" id="form-message-pass"></span> -->
+                                    <span class="form-message" id="form-message-pass"></span>
                                     
                                 </div>
-                                @error('password')
+                                <!-- @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
+                                @enderror -->
                                 <div class="form-group">
                                     <input class="login-register-info" id="password-confirm" type="password" name="password_confirmation" autocomplete="new-password" placeholder="Nhập lại mật khẩu">
-                                    <!-- <span class="form-message" id="form-message-repass"></span> -->
+                                    <span class="form-message" id="form-message-repass"></span>
                                     
                                 </div>
                                 <div>
@@ -143,12 +149,12 @@
                             <p class="p-5">Đã có tài khoản? <a class="login-button" href="./login ">Đăng nhập</a></p>
                         </center>
                     </div>
-               
+                    <script src="./js/login.js"></script>
 
             </div>
 
         </div>
-
+        
     </div>
     <footer class="footer">
 

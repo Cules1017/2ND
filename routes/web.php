@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\User;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +19,11 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 Auth::routes();
+
+Route::post('follow/{user}', 'App\Http\Controllers\FollowsController@store');
+Route::get('follow/{user}/show', 'App\Http\Controllers\FollowsController@index');
 Route::get('/search', [App\Http\Controllers\HomeController::class, 'search'])->name('search');
-// Route::post('/search/price/{p}', [App\Http\Controllers\HomeController::class, 'searchbyprice'])->name('search');
+Route::get('/search/price', [App\Http\Controllers\HomeController::class, 'searchbyprice'])->name('search');
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/profile/{user}', [App\Http\Controllers\ProfilesController::class, 'index'])->name('profile.show'); 
@@ -35,6 +40,13 @@ Route::post('/sent/{post}', [App\Http\Controllers\CommentsController::class, 'st
 Route::get('/feedback/create', [App\Http\Controllers\FeedbacksController::class, 'create'])->name('feedback.create'); 
 Route::post('/feedback', [App\Http\Controllers\FeedbacksController::class, 'store'])->name('feedback.store');
 
-Route::get('/follow/{user}', function () {
-    return view('profiles.follow');
+Route::get('/email', function () {
+    return new NewUserWelcomeMail();
 });
+
+
+// Route::post('/follow/{user}', function () {
+//     return ['àl'];
+//     // return auth()->user()->following()->toggle($user->profile);
+
+// });

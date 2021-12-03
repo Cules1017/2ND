@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="{{ asset('fonts\themify-icons\themify-icons.css') }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="{{ asset('fonts\themify-icons\themify-icons.css'); }}">
     <link rel="stylesheet" href="{{ asset('css\reset.css');}}">
     <link rel="stylesheet" href="{{ asset('css\base.css');}}">
-    <link rel="stylesheet" href="{{ asset('css\header-footer.css') }}">
- 
+    <link rel="stylesheet" href="{{ asset('css\header-footer.css'); }}">
+    <script> window.csrfToken = document.querySelector('meta[name="csrf-token"]').content;</script>
    <!--  <link rel="stylesheet" href="{{ URL::asset('css\home_page.css');}}">-->
-    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script src="{{ asset('js/app.js') }}" defer></script> -->
+    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet">-->
+    <script src="{{ asset('js/app.js') }}" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
     </style>
@@ -20,7 +21,7 @@
     
 </head>
 <body>
-    <div class="main">
+    <div id="app" class="main">
         <header class="header">
             <div class="grid">
                 <div class="grid__header">
@@ -77,7 +78,7 @@
                             </li>
                             @else
                             <li class="header__navbar-item">
-                                <a href="./profile/{{ auth()->user()->id }}" class="header__navbar-item-link"><i
+                                <a href="/profile/{{ auth()->user()->id }}" class="header__navbar-item-link"><i
                                         class="header__navbar-icon ti-user"></i>Quản
                                     lý tin</a>
                             </li>
@@ -165,7 +166,7 @@
                             
                            
                                 <input type="text" class="header__seacrh-input" placeholder="Tìm Kiếm Sản Phẩm" name="q">
-                               <div class="header__search-history">
+                               <!-- <div class="header__search-history">
                                     <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
                                     <ul class="header__search-history-list">
                                         <li class="header__search-history-item">
@@ -178,18 +179,20 @@
                                             <a href="">Quần áo cũ rách</a>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> -->
                                 
                             </div>
-                            <a href="" class="header__seacrh-btn">
+                            <div class="header__seacrh-btn">
+                                
                                 <i class="header__seacrh-btn-icon ti-search"></i>
-                            </a>
+                                <!-- <button type="submit" class="header__seacrh-btn-icon ti-search"> -->
+                            </div>
                             <!-- <button type="submit" class="header__seacrh-btn">
                         </div> -->
                     </form>
                         @guest
                         <div class="header__user">
-                            <img src="{{ URL::asset('img\9CRnB66v6URQ2wdBBvbinCRAiN1DbTFohYOgaHhG.img');}}" alt="" class="header__user-img">
+                            <img src="{{ URL::asset('img\9CRnB66v6URQ2wdBBvbinCRAiN1DbTFohYOgaHhG.png');}}" alt="" class="header__user-img">
                             <a href="{{ route('login') }}" class="header__user-name">Khách</a>
                         </div>
                         <div class="header__post">
@@ -200,7 +203,7 @@
                         @else
                         <div class="header__user">
                             <img src=" {{auth()->user()->profile->profileImage()}}" alt="" class="header__user-img">
-                            <a href="./profile/{{ auth()->user()->id }}" class="header__user-name">{{auth()->user()->name}} </a>
+                            <a href="/profile/{{ auth()->user()->id }}" class="header__user-name">{{auth()->user()->name}} </a>
                         </div>
                         <div class="header__post">
                             <a class="header__post-btn" href="/post/create">

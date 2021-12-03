@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('created_at', 'desc')->take(20)->get();
+        $posts = Post::orderBy('created_at', 'desc')->take(10)->get();
         return view('welcome', compact('posts'));
     }
     public function search(){
@@ -34,18 +34,25 @@ class HomeController extends Controller
                 $posts = Post::where('description','like','%'.$q.'%')->orWhere('title','like','%'.$q.'%')->paginate(10);
                 return view('posts.search' , compact('posts',  'q'));}
          else   {
+             $q=" ";
                     $posts = Post::orderBy('created_at', 'desc')->take(20)->get();
-                    return view('welcome', compact('posts'));}
+                    return view('posts.search', compact('posts', 'q'));}
     }
-//     public function searchbyprice(){
-//         // $q = Request();
-//          $q = Request::get('q');
-//          $max_price=Request::get('price');
-//          $min_price=$max_price-1000000;
-//         $posts = Post::where('description','like','%'.$q.'%')->orWhere('title','like','%'.$q.'%')->whereBetween('price', [$min_price, $max_price])->paginate(10);
-        
-//        return view('posts.search' , compact('posts'));
-//    }
+        public function searchbyprice(){
+            // $q = Request();
+            // dd('fa');
+            $q = Request::get('q');
+            $max_price=Request::get('price');
+            $min_price=$max_price-1000000;
+            if($q){
+            $posts = Post::where('title','like','%'.$q.'%')->whereBetween('price', [$min_price, $max_price])->paginate(10);
+            return view('posts.search' , compact('posts' ,  'q'));}
+            else{
+                $q=" ";
+                $posts = Post::whereBetween('price', [$min_price, $max_price])->paginate(10);
+                return view('posts.search' , compact('posts', 'q'));}
+            }
+    
 //    $inventory = Inventory::where('category', $cat)
 //    ->where('title', 'like', '%' . $search_query . '%')
 //    ->whereBetween('price', [$min_price, $max_price])
