@@ -21,65 +21,126 @@
                 <ul class="category-list">
 
                     <li class="category-item">
-                        <a href="" class="category-item-link">
-                        
-                            <img src="{{ URL::asset('img\category\thoitrang.png');}}" class="category-item-link-icon" alt=""> Thời trang
-                        </a>
+                        <form action="/search" class="category-item-link"  method="GET" role="search">
+                             @csrf
+                             <input  id="q" value="Thời trang" type="hidden" name="q">
+                             <input type="image" id="image"  
+                                    class="category-item-link-icon" 
+                                    src="{{ URL::asset('img\category\thoitrang.png');}}">
+                             Thời trang
+                        </form>
                     </li>
                     <li class="category-item">
-                        <a href="" class="category-item-link">
-                            <img src="{{ URL::asset('img\category\mobile.png');}}" alt="" class="category-item-link-icon"> Điện thoại
-                        </a>
+                        <form action="/search" class="category-item-link"  method="GET" role="search">
+                             @csrf
+                             <input  id="q" value="Điện thoại" type="hidden" name="q">
+                             <input type="image" id="image"  
+                                    class="category-item-link-icon" 
+                                    src="{{ URL::asset('img\category\mobile.png');}}">
+                                    Điện thoại
+                        </form>
                     </li>
                     <li class="category-item">
-                        <a href="" class="category-item-link">
-                            <img src="{{ URL::asset('img\category\xe.png');}}" alt="" class="category-item-link-icon"> Xe
-                        </a>
+                        <form action="/search" class="category-item-link"  method="GET" role="search">
+                             @csrf
+                             <input  id="q" value="Xe" type="hidden" name="q">
+                             <input type="image" id="image"  
+                                    class="category-item-link-icon" 
+                                    src="{{ URL::asset('img\category\xe.png');}}">
+                                    Xe
+                        </form>
                     </li>
                     <li class="category-item">
-                        <a href="" class="category-item-link">
-                            <img src="{{ URL::asset('img\category\do-gia-dung.png');}}" class="category-item-link-icon" alt=""> Đồ gia dụng
-                        </a>
+                        <form action="/search" class="category-item-link"  method="GET" role="search">
+                             @csrf
+                             <input  id="q" value="Đồ gia dụng" type="hidden" name="q">
+                             <input type="image" id="image"  
+                                    class="category-item-link-icon" 
+                                    src="{{ URL::asset('img\category\do-gia-dung.png');}}">
+                                    Đồ gia dụng
+                        </form>
                     </li>
                     <li class="category-item">
-                        <a href="" class="category-item-link">
-                            <img src="{{ URL::asset('img\category\noithat.png');}}" alt="" class="category-item-link-icon"> Nội thất
-                        </a>
+                        <form action="/search" class="category-item-link"  method="GET" role="search">
+                             @csrf
+                             <input  id="q" value="Nội thất" type="hidden" name="q">
+                             <input type="image" id="image"  
+                                    class="category-item-link-icon" 
+                                    src="{{ URL::asset('img\category\noithat.png');}}">
+                                    Nội thất
+                        </form>
+                    </li>
+                 
+                    <li class="category-item">
+                        <form action="/search" class="category-item-link"  method="GET" role="search">
+                             @csrf
+                             <input  id="q" value="Nhà đất" type="hidden" name="q">
+                             <input type="image" id="image"  
+                                    class="category-item-link-icon" 
+                                    src="{{ URL::asset('img\category\nha-dat.png');}}">
+                                    Nhà đất
+                        </form>
+                    </li>
+
+                    <li class="category-item">
+                        <form action="/search" class="category-item-link"  method="GET" role="search">
+                             @csrf
+                             <input  id="q" value="Nông nghiệp" type="hidden" name="q">
+                             <input type="image" id="image"  
+                                    class="category-item-link-icon" 
+                                    src="{{ URL::asset('img\category\nong-nghiep.png');}}">
+                                    Nông nghiệp
+                        </form>
                     </li>
                     <li class="category-item">
-                        <a href="" class="category-item-link">
-                            <img src="{{ URL::asset('img\category\nha-dat.png');}}" alt="" class="category-item-link-icon"> Nhà đất
-                        </a>
+                        <form action="/search" class="category-item-link"  method="GET" role="search">
+                             @csrf
+                             <input  id="q" value="Đồ công nghệ" type="hidden" name="q">
+                             <input type="image" id="image"  
+                                    class="category-item-link-icon" 
+                                    src="{{ URL::asset('img\category\do-cn.png');}}">
+                                    Đồ công nghệ
+                        </form>
                     </li>
                     <li class="category-item">
-                        <a href="" class="category-item-link">
-                            <img src="{{ URL::asset('img\category\nong-nghiep.png');}}" class="category-item-link-icon" alt=""> Nông nghiệp
-                        </a>
+                        <form action="/search" class="category-item-link"  method="GET" role="search">
+                             @csrf
+                             <input  id="q" value="Sở thích" type="hidden" name="q">
+                             <input type="image" id="image"  
+                                    class="category-item-link-icon" 
+                                    src="{{ URL::asset('img\category\so-thich.png');}}">
+                                    Sở thích
+                        </form>
                     </li>
                     <li class="category-item">
-                        <a href="" class="category-item-link">
-                            <img src="{{ URL::asset('img\category\do-cn.png');}}" alt="" class="category-item-link-icon"> Đồ công nghệ
-                        </a>
+                        <form action="/search" class="category-item-link"  method="GET" role="search">
+                             @csrf
+                             <input  id="q" value="Thú cưng" type="hidden" name="q">
+                             <input type="image" id="image"  
+                                    class="category-item-link-icon" 
+                                    src="{{ URL::asset('img\category\thu-cung.png');}}">
+                                    Thú cưng
+                        </form>
                     </li>
                     <li class="category-item">
-                        <a href="" class="category-item-link">
-                            <img src="{{ URL::asset('img\category\so-thich.png');}}" alt="" class="category-item-link-icon"> Sở thích
-                        </a>
+                        <form action="/search" class="category-item-link"  method="GET" role="search">
+                             @csrf
+                             <input  id="q" value="Thể thao" type="hidden" name="q">
+                             <input type="image" id="image"  
+                                    class="category-item-link-icon" 
+                                    src="{{ URL::asset('img\category\thethao.png');}}">
+                                    Thể thao
+                        </form>
                     </li>
                     <li class="category-item">
-                        <a href="" class="category-item-link">
-                            <img src="{{ URL::asset('img\category\thu-cung.png');}}" class="category-item-link-icon" alt=""> Thú cưng
-                        </a>
-                    </li>
-                    <li class="category-item">
-                        <a href="" class="category-item-link">
-                            <img src="{{ URL::asset('img\category\thethao.png');}}" alt="" class="category-item-link-icon"> Thể thao
-                        </a>
-                    </li>
-                    <li class="category-item">
-                        <a href="" class="category-item-link">
-                            <img src="{{ URL::asset('img\category\free_0d.png');}}" alt="" class="category-item-link-icon"> Hàng 0 đồng
-                        </a>
+                        <form action="/search" class="category-item-link"  method="GET" role="search">
+                             @csrf
+                             <input  id="q" value="Hàng 0 đồng" type="hidden" name="q">
+                             <input type="image" id="image"  
+                                    class="category-item-link-icon" 
+                                    src="{{ URL::asset('img\category\free_0d.png');}}">
+                                    Hàng 0 đồng
+                        </form>
                     </li>
                 </ul>
             </div>
@@ -87,7 +148,8 @@
             <div class="productshow">
                 <h3 class="productshow__header"><i class="ti-announcement"></i> Sản Phẩm Mới Đăng </h3>
                 <div class="grid__row">
-                     @foreach($posts as $p)
+                    
+                     @foreach(($posts) as $p)
                     <div class="grid__column-2-4">
                         <div class="productshow__item">
                             <a href="p/{{$p->id}}">
