@@ -54,9 +54,7 @@
                                                 </li>-->    
                                                 </ul>
                                                 <!--<span class="insert_attach_UP"><i class="dandev-plus">+</i></span>-->
-                                                @if ($errors->has('image'))
-                                                    <strong>{{ $errors->first('image') }}</strong>
-                                                @endif
+                                
                                             </div>
                                         </div>
                                         <!--------------------------------------------------FL CODE------------------->
@@ -70,7 +68,7 @@
                                         <div class="infor_product-category-title"><span>Thông Tin Sản Phẩm</span>
                                         </div>
                                         <div class="infor_product-category-ali">
-                                            <div class="tilte-selects">Danh mục sản phẩm:<span class="Obligatory">*</span></div>
+                                            <div class="tilte-selects">Danh mục sản phẩm:</div>
                                             <select name="category" id="category" class="infor_product-category-ali-select">
                                                 <option selected="Default"value="Khong">Danh mục sản phẩm
                                                     </option>
@@ -164,7 +162,7 @@
 
 
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     $('.BTN-UPLOAD').click(function() {
         if ($('.insert_attach_UP').hasClass('show-btn') === false) {
             $('.insert_attach_UP').addClass('show-btn');
@@ -240,8 +238,8 @@
             Validator.isValue('#Decrip_product'),
         ],
         Onsubmit: function(data) {
-            alert('data');
+            // alert('data');
         }
     });
-</script>
+</script> -->
 @endsection

@@ -6,7 +6,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
     </style>
-</head>
+
 @extends('layouts.app')
 @section('content')
     <div class="container"> 
@@ -32,8 +32,6 @@
                                         <!--<div class="user_upload-img"><i class="ti-camera user_upload-img-icon"></i></div>-->
 
                                     </div>
-                                    
-
                           
                                 </div>
                                 <div class="user_input-many">
@@ -49,13 +47,13 @@
 
                                             @if ($errors->has('name'))
                                                 <span class="valid_err_text" role="alert">
-                                                    <strong>{{ $errors->first('name') }}</strong>
+                                                    <strong>chưa nhập tên</strong>
                                                 </span>
                                             @endif
                                         
                                     </div>
                                     <div class="user_input-selected user_input-selected-in">
-                                        <div class="tile_selected">Tên:</div>
+                                        <div class="tile_selected">SDT:</div>
                                         
                                         <input id="phone"
                                             type="text"
@@ -66,11 +64,29 @@
 
                                             @if ($errors->has('phone'))
                                                 <span class="valid_err_text" role="alert">
-                                                    <strong>{{ $errors->first('phone') }}</strong>
+                                                    <strong>chưa nhập nhập sdt</strong>
                                                 </span>
                                             @endif
                                         
                                     </div>
+
+                                    <div class="user_input-selected user_input-selected-in">
+                                        <div class="tile_selected">Địa chỉ:</div>
+                                        
+                                        <input id="address"
+                                            type="text"
+                                            class="user_name"
+                                            name="address"
+                                            value="{{ old('address') ?? $user->profile->address }}"
+                                            autocomplete="address" autofocus>
+
+                                            @if ($errors->has('address'))
+                                                <span class="valid_err_text" role="alert">
+                                                    <strong>{{ $errors->first('address') }}</strong>
+                                                </span>
+                                            @endif  
+                                    </div>
+
                                     <div class="user_input-export">
                                         <input type="submit" class="user_input-export-btn-text" value="Lưu">
                                     </div>
@@ -107,7 +123,7 @@
 </script>
 <script type="text/javascript">
     function ImagesFileAsURL() {
-        var fileSelected = document.getElementById('upload-img').files;
+        var fileSelected = document.getElementById('image').files;
         if (fileSelected.length > 0) {
             var fileToLoad = fileSelected[0];
             var fileReader = new FileReader();

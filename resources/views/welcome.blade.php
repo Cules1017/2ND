@@ -1,12 +1,12 @@
-
+@extends('layouts.app')
+@section('content')
 <head>
     <link rel="stylesheet" href="{{ URL::asset('css/reset.css');}}">
     <link rel="stylesheet" href="{{ URL::asset('css/base.css');}}">
     <link rel="stylesheet" href="{{ URL::asset('css/Post_page.css');}}">
     <link rel="stylesheet" href="{{ URL::asset('css/home_page.css');}}">
 </head>
-@extends('layouts.app')
-@section('content')
+
 
 
 <div class="grid">
@@ -95,7 +95,7 @@
                                 $images = explode('|', $p->image);
                             @endphp
                                 <div class="productshow__item-img" style="background-image: url({{URL::to($images[0])}});"></div>
-                                <h4 class="productshow__item-name">{{$p->title}}</h4>
+                                <h4 class="productshow__item-name">{{  \Illuminate\Support\Str::limit(($p->title), 25, $end = '...') }}</h4>
                                 <div class="productshow__item-price">{{$p->price}}đ</div>
                                 <div class="productshow__item-action">
                                     <a class="action__LIKE" href=""><i class="ti-heart"></i></a>

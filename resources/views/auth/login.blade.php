@@ -43,28 +43,28 @@
                                 <div>
                                     <div class="form-group">
                                         <input class="login-register-info" type="email" placeholder="Email" name="email"
-                                        id="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                                        <!-- <span class="form-message" id="login-form-message-email"></span> -->
+                                        id="email" value="{{ old('email') }}"  autocomplete="email" autofocus>
+                                        <span class="form-message" id="login-form-message-email"></span>
 
-                                        @error('email')
+                                        <!-- @error('email')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
-                                        @enderror
+                                        @enderror -->
 
 
                                     </div>
 
                                     <div class="form-group">
                                         <input class="login-register-info" type="password" placeholder="Mật khẩu" name="password"
-                                        id="password" required autocomplete="current-password">
-                                        <!-- <span class="form-message" id="login-form-message-pass"></span> -->
+                                        id="password"  autocomplete="current-password">
+                                        <span class="form-message" id="login-form-message-pass"></span>
                                       
-                                        @error('password')
+                                        <!-- @error('password')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
-                                        @enderror
+                                        @enderror -->
 
 
 
