@@ -30,7 +30,11 @@
                                         <input type="file" class="input-img_ac" id="image" name="image" accept="image/png, image/jpeg" onchange="ImagesFileAsURL()">
                                         <div id="displayIMG" class="displayIMG"></div>
                                         <!--<div class="user_upload-img"><i class="ti-camera user_upload-img-icon"></i></div>-->
-
+                                        @if ($errors->has('image'))
+                                                <span class="valid_err_text" role="alert">
+                                                    <strong>Vui lòng thêm ảnh</strong>
+                                                </span>
+                                            @endif
                                     </div>
                           
                                 </div>
@@ -47,7 +51,7 @@
 
                                             @if ($errors->has('name'))
                                                 <span class="valid_err_text" role="alert">
-                                                    <strong>chưa nhập tên</strong>
+                                                    <strong>Chưa nhập tên</strong>
                                                 </span>
                                             @endif
                                         
@@ -64,7 +68,7 @@
 
                                             @if ($errors->has('phone'))
                                                 <span class="valid_err_text" role="alert">
-                                                    <strong>chưa nhập nhập sdt</strong>
+                                                    <strong>Số điện thoại không chính xác</strong>
                                                 </span>
                                             @endif
                                         
@@ -82,7 +86,7 @@
 
                                             @if ($errors->has('address'))
                                                 <span class="valid_err_text" role="alert">
-                                                    <strong>{{ $errors->first('address') }}</strong>
+                                                    <strong>Vui lòng nhập địa chỉ</strong>
                                                 </span>
                                             @endif  
                                     </div>

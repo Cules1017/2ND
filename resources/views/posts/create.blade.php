@@ -32,15 +32,15 @@
                                     <div class="infor_product-uploadImg">
                                         <!---------------TEST-->
                                         <div class="reviews">
-                                            <div class="">
-                                                <!-- <label class="BTN-UPLOAD-title" type="file"  id="image" name="image"><span>Thêm ảnh mô tả</span></label> -->
-                                                <input class="" type="file"  id="image" name="image[]" multiple accept="image/png, image/jpeg"><span>Thêm ảnh mô tả</span></input>
+                                            <div class="BTN-UPLOAD">
+                                            <!-- <label class="BTN-UPLOAD-title"><span>Thêm ảnh mô tả</span></label> -->
+                                                <input class="  " type="file" id="image" name="image[]" multiple accept="image/png, image/jpeg"><span>Thêm ảnh mô tả</span></input>
                                             </div>
                             
 
-                                            <div class="list_IMG">
+                                             <div class="list_IMG">
                                                 <ul class="List_attach_view">
-                                                    <!--<img src="./assets/img/category/do-gia-dung.png" alt="">
+                                                  <!-- <img src="./assets/img/category/do-gia-dung.png" alt="">
                                                 <img src="./assets/img/category/free_0d.png" alt="">
                                                 <li id="li_files_' + _time + '" class="li_file_hide">
                                                     <div class="img-wrap">
@@ -51,15 +51,20 @@
                                                         <div class="' + _time + '">
                                                         <input type="file" class="hidden"  onchange="uploadImg(this)" id="files_' + _time + '"   />
                                                         </div>
-                                                </li>-->    
+                                                </li>   -->
                                                 </ul>
-                                                <!--<span class="insert_attach_UP"><i class="dandev-plus">+</i></span>-->
+                                                <!-- <span class="insert_attach_UP"><i class="dandev-plus">+</i></span> -->
                                 
                                             </div>
                                         </div>
                                         <!--------------------------------------------------FL CODE------------------->
-
+                                        
                                     </div>
+                                        @error('image')
+                                            <span class="valid_err_text">
+                                                    Yêu cầu hình ảnh
+                                                </span>
+                                        @enderror   
                                 </div>
                                 <div class="grid__column-7of10">
 
@@ -84,13 +89,8 @@
                                                 <option value="The thao">Thể thao</option>
                                                 <option value="Thu cung">Thú cưng</option>
                                                 <option value="Hang 0 đong">Hàng 0 đồng</option>
-                                            </select>
-                                            <span class="valid_err_text">
-                                             
-                                            </span>
-                                            <span class="invalid-feedback">
-                                            </span>
-                                           
+                                            </select>  
+                                            
                                         </div>
                                         <div class="infor_product-category-ali">
                                             <div class="tilte-selects">Tiêu đề cho sản phẩm:<span class="Obligatory">*</span></div>
@@ -100,7 +100,11 @@
                                             autocomplete="title" autofocus>
                                             <span class="valid_err_text"></span>
                                             
-                                            
+                                            @error('title')
+                                            <span class="valid_err_text">
+                                                    Không được để thiếu tên
+                                                </span>
+                                            @enderror
                                              
                                          </div>
 
@@ -114,9 +118,11 @@
                                             autocomplete="price" autofocus>
                                             <label for="Price_product" class="Label_unit">VND</label>
 
-                                           
+                                            @error('price')
                                             <span class="valid_err_text">
-                                            </span>
+                                                Giá không chính xác
+                                                </span>
+                                            @enderror
                                           
                                         </div>
                                         <!-- <div class="infor_product-category-ali">
@@ -134,11 +140,13 @@
                                                 - Hạn bảo hành(nếu có)
                                                 Hãy mô tả thật rõ ràng để sản phẩm của bạn được bán nhanh nhất"
                                                 name="description"
-                                            value="{{ old('description') }}"
-                                            autocomplete="description" autofocus></textarea>
-                                            <span class="valid_err_text"></span>
-                                            <span class="valid_err_text" role="alert">
-                                            </span>
+                                            
+                                            autocomplete="description" autofocus>{{ old('description') }}"</textarea>
+                                            @error('description')
+                                            <span class="valid_err_text">
+                                                    Không được để thiếu
+                                                </span>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="infor_product-export">
@@ -162,7 +170,7 @@
 
 
 
-<!-- <script type="text/javascript">
+<script type="text/javascript">
     $('.BTN-UPLOAD').click(function() {
         if ($('.insert_attach_UP').hasClass('show-btn') === false) {
             $('.insert_attach_UP').addClass('show-btn');
@@ -224,7 +232,7 @@
 
     }
 </script>
-<script src="{{asset('js\img_upload.js');}}"></script>
+<!-- <script src="{{asset('js\img_upload.js');}}"></script>
 <script type="text/javascript">
     Validator({
         form: '#form_post_product',

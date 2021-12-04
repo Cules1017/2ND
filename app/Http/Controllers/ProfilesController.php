@@ -46,10 +46,10 @@ class ProfilesController extends Controller
         $this->authorize('update', $user->profile);
         $data = request()->validate([
             'name'=> 'required',
-            'phone' => ['required', 'string', 'max:11'],  
+            'phone' => ['required', 'string', 'max:12'],  
         ]);
         $data1 = request()->validate([
-            'image'=>'image',
+            'image'=>'required|image',
             'address'=>'required',
         ]);
 

@@ -161,7 +161,7 @@
                                 <div class="productshow__item-price">{{$p->price}}đ</div>
                                 <div class="productshow__item-action">
                                     <a class="action__LIKE" href=""><i class="ti-heart"></i></a>
-                                    <a href="p/{$p->id}" class="action__BUY">Mua</a>
+                                    <a href="/p/{{$p->id}}" class="action__BUY">Mua</a>
                                 </div>
                             </a>
                         </div>

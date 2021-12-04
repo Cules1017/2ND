@@ -46,8 +46,8 @@
                                     <input class="login-register-info @error('email') is-invalid @enderror"  id="email" type="text" placeholder="Email" name="email"  
                                     value="{{ old('email') }}"  autocomplete="email" autofocus> 
                                     @error('email')
-                                    <span class="form-message" id="form-message-name" role="alert">
-                                        <strong>email đã được sử dụng hoặc chưa chính xác</strong>
+                                    <span class="form-message" id="form-message-email" role="alert">
+                                        <strong>Email đã được sử dụng hoặc chưa chính xác</strong>
                                     </span>
                                      @enderror
                                      
@@ -64,7 +64,7 @@
                                     >
                                  @error('name')
                                     <span class="form-message" id="form-message-name" role="alert">
-                                        <strong>chưa điền họ tên kìa</strong>
+                                        <strong>Chưa điền họ tên kìa</strong>
                                     </span>
                                 @enderror
                                     
@@ -77,21 +77,21 @@
                                     <span class="form-message" id="form-message-phone"></span> 
                                     
                                 </div>
-                                <!-- @error('phone')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                @error('phone')
+                                    <span class="form-message" id="form-message-phone" role="alert">
+                                        <strong>Sdt không chính xác hoặc đã được sử dụng</strong>
                                     </span>
-                                @enderror -->
+                                @enderror
                                 <div class="form-group">
-                                    <input class="login-register-info" id="password" type="password" name="password" autocomplete="new-password" placeholder="Nhập mật khẩu ( có ít nhất 8 kí tự )">
+                                    <input class="login-register-info" id="password" type="password" name="password" autocomplete="new-password" placeholder="Nhập mật khẩu ( có ít nhất 5 kí tự )">
                                     <span class="form-message" id="form-message-pass"></span>
                                     
                                 </div>
-                                <!-- @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                @error('password')
+                                    <span class="form-message" id="form-message-pass" role="alert">
+                                        <strong>Mật khẩu không trùng hoặc không chính xác</strong>
                                     </span>
-                                @enderror -->
+                                @enderror
                                 <div class="form-group">
                                     <input class="login-register-info" id="password-confirm" type="password" name="password_confirmation" autocomplete="new-password" placeholder="Nhập lại mật khẩu">
                                     <span class="form-message" id="form-message-repass"></span>
