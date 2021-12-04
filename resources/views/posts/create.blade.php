@@ -1,9 +1,8 @@
-
 <head>
 <link rel="stylesheet" href="{{ URL::asset('css/reset.css');}}">
 <link rel="stylesheet" href=" {{ URL::asset('css/base.css');}}">
 <link rel="stylesheet" href=" {{ URL::asset('css/Post_page.css');}}">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
 <title>Đăng Bán</title>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -34,7 +33,8 @@
                                         <div class="reviews">
                                             <div class="BTN-UPLOAD">
                                             <!-- <label class="BTN-UPLOAD-title"><span>Thêm ảnh mô tả</span></label> -->
-                                                <input class="  " type="file" id="image" name="image[]" multiple accept="image/png, image/jpeg"><span>Thêm ảnh mô tả</span></input>
+                                               
+                                            <input class="  " type="file" id="image" name="image[]" multiple accept="image/png, image/jpeg"><span>Thêm ảnh mô tả</span></input>
                                             </div>
                             
 
@@ -170,7 +170,7 @@
 
 
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     $('.BTN-UPLOAD').click(function() {
         if ($('.insert_attach_UP').hasClass('show-btn') === false) {
             $('.insert_attach_UP').addClass('show-btn');
@@ -231,7 +231,7 @@
         jQuery(el).closest('li').remove();
 
     }
-</script>
+</script> -->
 <!-- <script src="{{asset('js\img_upload.js');}}"></script>
 <script type="text/javascript">
     Validator({
