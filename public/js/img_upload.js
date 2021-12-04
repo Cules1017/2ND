@@ -23,7 +23,7 @@ function Validator(option) {
     var formElement = document.querySelector(option.form);
     if (formElement) {
         formElement.onsubmit = function(e) {
-            e.preventDefault();
+            ///e.preventDefault();
             //kiểm tra điền form hoàn thành
             var isFormDone = true;
             option.rules.forEach(function(rule) {
@@ -40,9 +40,6 @@ function Validator(option) {
                     var formValues = Array.from(readInputs).reduce(function(values, input) {
                         if (input.type == 'file') {
                             values[input.name] = input.files;
-                        } else {
-                            values[input.name] = input.value;
-
                         }
                         return values;
                     }, {});

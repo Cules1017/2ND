@@ -11,7 +11,7 @@
     
    <!--  <link rel="stylesheet" href="{{ URL::asset('css\home_page.css');}}">-->
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet">-->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+   <script src="{{ asset('js/app.js') }}" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
     </style>
