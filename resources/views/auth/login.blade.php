@@ -44,25 +44,29 @@
                                     <div class="form-group">
                                         <input class="login-register-info" type="email" placeholder="Email" name="email"
                                         id="email" value="{{ old('email') }}"  autocomplete="email" autofocus>
-                                        <span class="form-message" id="login-form-message-email"></span>
+                                       
 
-                                        <!-- @error('email')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
+                                        @error('email')
+                                            <span class="form-message" id="login-form-message-pass" role="alert">
+                                                <strong>Email hoặc mật khẩu không chính xác</strong>
                                             </span>
-                                        @enderror -->
-
+                                        @enderror
+                                        @error('password')
+                                            <span class="form-message" id="login-form-message-pass" role="alert">
+                                                <strong>Email hoặc mật khẩu không chính xác</strong>
+                                            </span>
+                                        @enderror
 
                                     </div>
 
                                     <div class="form-group">
                                         <input class="login-register-info" type="password" placeholder="Mật khẩu" name="password"
                                         id="password"  autocomplete="current-password">
-                                        <span class="form-message" id="login-form-message-pass"></span>
-                                      
-                                        <!-- @error('password')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
+                                        <!-- <span class="form-message" id="login-form-message-pass"></span> -->
+<!--                                       
+                                        @error('password')
+                                            <span class="form-message" id="login-form-message-pass" role="alert">
+                                                <strong>mật khẩu không chính xác</strong>
                                             </span>
                                         @enderror -->
 

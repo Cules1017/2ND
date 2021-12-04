@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('id', 'DESC')->take(10)->get();
+        $posts = Post::orderBy('id', 'DESC')->take(20)->get();
         return view('welcome', compact('posts'));
     }
     public function search(){
@@ -31,25 +31,29 @@ class HomeController extends Controller
         
           $q = Request::get('q');
           if($q){
-                $posts = Post::where('category','like','%'.$q.'%')->orWhere('title','like','%'.$q.'%')->orderBy('id', 'desc')->paginate(10);
+                $posts = Post::where('category','like','%'.$q.'%')->orWhere('title','like','%'.$q.'%')->orderBy('id', 'desc')->paginate(20);
                 return view('posts.search' , compact('posts',  'q'));}
          else   {
              $q=" ";
                     $posts = Post::orderBy('id', 'desc')->take(20)->get();
                     return view('posts.search', compact('posts', 'q'));}
     }
-        public function searchbyprice(){
+        public function searchbyprice(Request $request){
             // $q = Request();
             // dd('fa');
-            $q = Request::get('q');
-            $max_price=Request::get('price');
+            $q = request()->get('q');
+            $max_price=(int)request()->get('price');
             $min_price=$max_price-1000000;
+            if($max_price == 4000000000)$min_price = 3000000;
+            if($max_price == 0){$min_price = 0;$max_price = 1000000000000;}
+            // dd($max_price);
             if($q){
-            $posts = Post::where('title','like','%'.$q.'%')->orWhere('category','like','%'.$q.'%')->whereBetween('price', [$min_price, $max_price])->orderBy('id', 'desc')->paginate(10);
+            $posts = Post::where('category','like','%'.$q.'%')->orWhere('title','like','%'.$q.'%')->orderBy('id', 'desc')->paginate(20);
+            $posts= $posts->whereBetween('price', [$min_price, $max_price]);
             return view('posts.search' , compact('posts' ,  'q'));}
             else{
                 $q=" ";
-                $posts = Post::whereBetween('price', [$min_price, $max_price])->orderBy('id', 'desc')->paginate(10);
+                $posts = Post::whereBetween('price', [$min_price, $max_price])->orderBy('id', 'desc')->paginate(20);
                 return view('posts.search' , compact('posts', 'q'));}
             }
     

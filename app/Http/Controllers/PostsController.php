@@ -27,9 +27,9 @@ class PostsController extends Controller
             'title'=> 'required',
             'description'=>'required',
             'image' => 'required',
-            'image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            // 'image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'category'=>'required',
-            'price'=>'required|between:0,3000000000',
+            'price'=>'required|integer|between:0,100000000000',
         ]);
         
         if($files = $request->file('image')){
@@ -78,9 +78,13 @@ class PostsController extends Controller
 
     public function update(Post $post){
         $this->authorize('update', $post);
-        $data = request()->validate([
+        $data= request()->validate([
             'title'=> 'required',
-            'description'=> 'required',
+            'description'=>'required',
+            'image' => 'required',
+            // 'image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'category'=>'required',
+            'price'=>'required|integer|between:0,100000000000',
         ]);
 
           $post->update(array_merge(  $data, ));

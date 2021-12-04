@@ -60,6 +60,11 @@
                                         <!--------------------------------------------------FL CODE------------------->
 
                                     </div>
+                                            @error('image')
+                                            <span class="valid_err_text">
+                                                    Yêu cầu ảnh
+                                                </span>
+                                            @enderror
                                 </div>
                                 <div class="grid__column-7of10">
 
@@ -98,10 +103,12 @@
                                             placeholder="Tiêu đề cho sản phẩm (bắt buộc)"
                                             value="{{ old('title') ?? $post->title }}"
                                             autocomplete="title" autofocus>
-                                            <span class="valid_err_text"></span>
                                             
-                                            
-                                             
+                                            @error('title')
+                                            <span class="valid_err_text">
+                                                    Yêu cầu tên sản phẩm
+                                                </span>
+                                            @enderror  
                                          </div>
 
 
@@ -115,7 +122,11 @@
                                             <label for="Price_product" class="Label_unit">VND</label>
 
                                            
+                                            @error('price')
                                             <span class="valid_err_text">
+                                                    Giá không chính xác
+                                                </span>
+                                            @enderror 
                                             </span>
                                           
                                         </div>
@@ -136,8 +147,11 @@
                                                 name="description"
                                             value=""
                                             autocomplete="description" autofocus>{{ old('description') ?? e($post->description) }}</textarea>
-                                            <span class="valid_err_text"></span>
-                                            <span class="valid_err_text" role="alert">
+                                            @error('description')
+                                            <span class="valid_err_text">
+                                                    Yêu cầu điền thông tin chi tiết
+                                                </span>
+                                            @enderror 
                                             </span>
                                         </div>
                                     </div>

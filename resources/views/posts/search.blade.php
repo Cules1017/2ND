@@ -23,16 +23,17 @@
                                 <div class="chose-form">
                                     <!-- <label for="price" class="label">Giá cả</label> -->
                                     <select name="price" id="price" class="choice">
-                                        <option value="Giá" class="chossen-info">Giá</option>
+                                        <option value="0" class="chossen-info">Giá</option>
                                         <option value="1000000" class="chossen-info">0 - 1.000.000"</option>
                                         <option value="2000000" class="chossen-info">1.000.000 - 2.000.000
                                         </option>
                                         <option value="3000000" class="chossen-info">2.000.000 - 3.000.000
                                         </option>
-                                        <option value="4000000" class="chossen-info">>3.000.000
+                                        <option value="4000000000" class="chossen-info">>3.000.000
                                         </option>
                                     </select>
                                     <input  id="q" value="{{$q}}" type="hidden" name="q">
+                                    <!-- <input  id="posts" value="{{$posts}}" type="hidden" name="q"> -->
                              <button style="sort">tìm</button>
                             </form>
                         </div>
