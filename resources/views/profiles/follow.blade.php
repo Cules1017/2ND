@@ -18,41 +18,46 @@
                         
                         <div class="FLed-list">
                         
-                            <ul class="FLed-box">
-                                @foreach($user->profile->followers as $follower)
+                            <div class="FLed-box">
+                                <!-- @foreach($user->profile->followers as $follower) -->
                                 
-                                <li><a href="#" class="FLed-box-info">
-                                        <!-- <div class="Fled-info"> -->
-                                            <div class="Fled-avatar">
-                                                <i class="user-icon ti-user"></i>
-                                            </div>
-                                            <div class="Fled-user">
+                                <!-- <li class="FLed-box-info">
+                                    <a href="#" >
+                                        
+                                        <div class="Fled-avatar">
+                                                <img src="#" alt="">
+                                        </div>
+                                        <div class="Fled-user">
                                                 {{$follower->name}}
-                                            </div>
-                                        <!-- </div> -->
-
+                                        </div>
                                     </a>
-                                </li>
-                                @endforeach
-            
-                            </ul>
+                                </li> -->
+                                
+                                <!-- @endforeach -->
+                                <div class="FL-avatar">
+                                    <a href="#"><img src="#" alt=""></a>
+                                </div>
+                                <div class="FL-name">
+                                    <a href="#" style="text-decoration: none" class="name">Quang Minh</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
 
-                    <!-- <div class="FLing">
-                        <a href="#" class="FLing-link">ĐƯỢC THEO DÕI </a>
+                    <div class="FLing">
+                        <a href="#" class="FLing-link">ĐANG THEO DÕI </a>
                         <div class="FLing-list">
                             <ul class="FLing-box">
                                 
                             </ul>
                         </div>
-                    </div> -->
+                    </div>
 
                     <div class="notthing"></div>
 
                 </div>
             </div>
-        </center>
+</center>
 
 @endsection
