@@ -57,6 +57,36 @@ class PostsController extends Controller
         return redirect('/profile/' . auth()->user()->id);
     }
 
+    public function update(Post $post, Request $request){
+        $this->authorize('update', $post);
+        $data= request()->validate([
+            'title'=> 'required',
+            'description'=>'required',
+            'image' => 'required',
+            // 'image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'category'=>'required',
+            'price'=>'required|integer|between:0,100000000000',
+        ]);
+        if($files = $request->file('image')){
+            foreach ($files as $file) {
+                $image_name = $file->store('');
+                $ext = strtolower($file->getClientOriginalExtension());
+                // $image_full_name = $image_name.'.'.$ext;
+                $upload_path = 'posts/';
+                $image_url = $upload_path.$image_name;
+                $file->move($upload_path, $image_name);
+                $image[] = $image_url;
+            }
+        }
+        
+        $data['image'] = implode('|', $image);
+
+          $post->update(array_merge(  $data, ));
+        
+        return redirect("/p/{$post->id}");
+    }
+
+
     public function show(\App\Models\Post $post)
     {
         return view('posts.show', compact('post'));
@@ -76,21 +106,7 @@ class PostsController extends Controller
         return view('posts.edit', compact('post'));
     }
 
-    public function update(Post $post){
-        $this->authorize('update', $post);
-        $data= request()->validate([
-            'title'=> 'required',
-            'description'=>'required',
-            'image' => 'required',
-            // 'image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'category'=>'required',
-            'price'=>'required|integer|between:0,100000000000',
-        ]);
 
-          $post->update(array_merge(  $data, ));
-        
-        return redirect("/p/{$post->id}");
-    }
     public function sortbycategory()
     {
         $posts = Post::orderBy('created_at', 'desc')->take(20)->get();

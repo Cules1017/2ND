@@ -34,9 +34,10 @@
                                         <div class="reviews">
                                             <div class="">
                                                 <!-- <label class="BTN-UPLOAD-title" type="file"  id="image" name="image"><span>Thêm ảnh mô tả</span></label> -->
-                                                <input class="" type="file"  id="image" name="image[]" multiple accept="image/png, image/jpeg"><span>Thêm ảnh mô tả</span></input>
+                                                <input class="" type="file" id="image" name="image[]" multiple accept="image/png, image/jpeg"><span>Thêm ảnh mô tả</span></input>
+                                                
                                             </div>
-                            
+                                        
 
                                             <div class="list_IMG">
                                                 <ul class="List_attach_view">
@@ -51,20 +52,22 @@
                                                         <div class="' + _time + '">
                                                         <input type="file" class="hidden"  onchange="uploadImg(this)" id="files_' + _time + '"   />
                                                         </div>
-                                                </li>-->    
+                                                </li>-->   
+                                                 
+                                               
                                                 </ul>
                                                 <!--<span class="insert_attach_UP"><i class="dandev-plus">+</i></span>-->
                                 
                                             </div>
                                         </div>
                                         <!--------------------------------------------------FL CODE------------------->
-
+                                        @error('image')
+                                                <span class="valid_err_text">
+                                                        Yêu cầu ảnh
+                                                    </span>
+                                                @enderror
                                     </div>
-                                            @error('image')
-                                            <span class="valid_err_text">
-                                                    Yêu cầu ảnh
-                                                </span>
-                                            @enderror
+                                           
                                 </div>
                                 <div class="grid__column-7of10">
 
