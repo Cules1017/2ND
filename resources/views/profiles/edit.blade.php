@@ -113,8 +113,6 @@
     $('#selected-img').click(function() {
         htmls = `<a class="user_upload-img" onclick="click_input()"><i class="ti-camera user_upload-img-icon"></i></a>`;
         jQuery('#selected-img').append(htmls);
-
-
     });
 
     function click_input() {

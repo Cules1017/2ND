@@ -3,8 +3,10 @@
 <head>
     <link rel="stylesheet" href="{{ URL::asset('css/reset.css');}}">
     <link rel="stylesheet" href="{{ URL::asset('css/base.css');}}">
+    <link rel="stylesheet" href="{{ URL::asset('css/pagination.css');}}">
     <link rel="stylesheet" href="{{ URL::asset('css/Post_page.css');}}">
     <link rel="stylesheet" href="{{ URL::asset('css/home_page.css');}}">
+    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
 </head>
 
 
@@ -169,10 +171,26 @@
                     @endforeach 
                     
                 </div>
+            
                 <!--------------------------MORE------------------------------>
                 <div class="productshow_more">
-                    <a class="productshow_more-link" href="">Xem thêm
-                                <i class="productshow_more-icon ti-arrow-circle-down"></i></a>
+                    <!-- <a class="productshow_more-link" href="">
+                                 <i class="productshow_more-icon ti-arrow-circle-down"></i></a> -->
+                            <div class="pagination">
+                                @if($active !=1)
+                                <a href="/home/{{$active-1}}">&laquo;</a>
+                                @endif
+                                @for ($i = 1;  $i <= $pages; $i++)
+                                    @if($i==$active)
+                                        <a href="/home/{{$i}}" class="active">{{$i}}</a>
+                                    @else
+                                        <a href="/home/{{$i}}" class="">{{$i}}</a></form>
+                                    @endif
+                                @endfor
+                                @if($active!=$pages)
+                            <a href="/home/{{$active+1}}">&raquo;</a>
+                            @endif
+                            </div>
                 </div>
             </div>
         </div>
