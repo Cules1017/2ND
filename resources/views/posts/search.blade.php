@@ -19,7 +19,7 @@
                                 <!-- <div href="#" style="text-decoration: none;color: white;">Tin đăng gần nhất</div> -->
                             </div>
                             <form action="/search/price/" method="GET" role="search">
-                             @csrf
+                             <!-- @csrf -->
                                 <div class="chose-form">
                                     <!-- <label for="price" class="label">Giá cả</label> -->
                                     <select name="price" id="price" class="choice">

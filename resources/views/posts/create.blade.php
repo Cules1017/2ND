@@ -141,7 +141,7 @@
                                                 Hãy mô tả thật rõ ràng để sản phẩm của bạn được bán nhanh nhất"
                                                 name="description"
                                             
-                                            autocomplete="description" autofocus>{{ old('description') }}"</textarea>
+                                            autocomplete="description" autofocus>{{ old('description') }}</textarea>
                                             @error('description')
                                             <span class="valid_err_text">
                                                     Không được để thiếu

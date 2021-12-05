@@ -25,6 +25,7 @@ Route::get('follow/{user}/show', 'App\Http\Controllers\FollowsController@index')
 Route::get('/search', [App\Http\Controllers\HomeController::class, 'search'])->name('search');
 Route::get('/search/price', [App\Http\Controllers\HomeController::class, 'searchbyprice'])->name('search');
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home/{i}', [App\Http\Controllers\HomeController::class, 'pages'])->name('home');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/profile/{user}', [App\Http\Controllers\ProfilesController::class, 'index'])->name('profile.show'); 
 Route::get('/post/create', [App\Http\Controllers\PostsController::class, 'create'])->name('post.create'); 
