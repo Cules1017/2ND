@@ -98,7 +98,7 @@
                     </div>
                     <div class="grid__column-4">
                         <div class="contain__user">
-                            <div class="contain__user-img" ><img class="user__img" src="{{URL::to($posts->user->profile->profileImage())}}" alt=""></div>
+                            <div class="contain__user-img" ><img class="user__img" src="{{URL::to($post->user->profile->profileImage())}}" alt=""></div>
                             <div class="contain__header">
 
                                 <div class="contain__title">

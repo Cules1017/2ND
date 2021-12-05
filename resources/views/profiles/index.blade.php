@@ -23,7 +23,7 @@
                     </div>
                     <div class="grid__column-10">
                         <div class="contain__user">
-                            <div class="contain__user-img"><img src="{{URL::to($posts->user->profile->profileImage())}}" alt=""></div>
+                            <div class="contain__user-img"><img src="{{URL::to($user->profile->profileImage())}}" alt=""></div>
                             <div class="contain__title">
                                 <h2 class="contain__title-h2">{{$user->name}}</h2>      
                                 <div>   
