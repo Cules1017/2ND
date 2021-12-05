@@ -42,7 +42,7 @@ class ProfilesController extends Controller
         return view('profiles.edit', compact('user'));
     }
 
-    public function update(User $user){
+    public function update(User $user , Request $request){
         $this->authorize('update', $user->profile);
         $data = request()->validate([
             'name'=> 'required',
@@ -54,12 +54,19 @@ class ProfilesController extends Controller
         ]);
 
         if (request('image')) {
-            $imagePath = request('image')->store('profile', 'public');
+            $file = $request->file('image');
+            $image_name = $file->store('');
+            // dd($image_name);
+            // $upload_path = request('image')->store('profiles', 'public');
 
-            $image = Image::make(public_path("storage/{$imagePath}"))->fit(1000, 1000);
-            $image->save();
+            $upload_path = 'profiles/';
+            $image_url = $upload_path.$image_name;
+            $file->move($upload_path, $image_name);
 
-            $imageArray = ['image' => $imagePath];
+            // $image = Image::make(public_path("storage/{$imagePath}"))->fit(1000, 1000);
+            // $image->save();
+
+            $imageArray = ['image' => $image_url];
         }
 
        auth()->user()->profile->update(array_merge(
