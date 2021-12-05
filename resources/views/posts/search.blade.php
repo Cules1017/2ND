@@ -1,16 +1,17 @@
 
 <head>
-    <link rel="stylesheet" href="{{ URL::asset('css/Post_page.css');}}">
-    <link rel="stylesheet" href="{{ URL::asset('css/home_page.css');}}">
+    <link rel="stylesheet" href="{{ URL::asset('css/base.css');}}">
+    <link rel="stylesheet" href="{{ URL::asset('css/header-footer.css');}}">
+    <link rel="stylesheet" href="{{ URL::asset('css/sort.css');}}">
+    <link rel="stylesheet" href="{{ URL::asset('css/reset.css');}}">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/">
 </head>
 
 @extends('layouts.app')
 
 @section('content')
-
-
-        <div class="main">
-            <center>
+        <div class="main-2">
+            
                 <div class="search-box">
                     <div class="chossen-box">
                         <div class="sort-box">
@@ -34,48 +35,61 @@
                                     </select>
                                     <input  id="q" value="{{$q}}" type="hidden" name="q">
                                     <!-- <input  id="posts" value="{{$posts}}" type="hidden" name="q"> -->
-                             <button style="sort">tìm</button>
+                             <button style="sort" class="sort">LỌC</button>
                             </form>
                         </div>
                     </div>
 
-                    
-                    <div class="productshow">
-                        <h3 class="productshow__header"><i class="ti-announcement"></i> Sản Phẩm liên quan tới {{$q}} </h3>
-                        <div class="grid__row">
-                        @foreach($posts as $p)
-                    <div class="grid__column-2-4">
-                        <div class="productshow__item">
-                            <a href="p/{{$p->id}}">
-                            @php
-                                $images = explode('|', $p->image);
-                            @endphp
-                                <div class="productshow__item-img" style="background-image: url({{URL::to($images[0])}});"></div>
-                                <h4 class="productshow__item-name">{{  \Illuminate\Support\Str::limit(($p->title), 25, $end = '...') }}</h4>
-                                <div class="productshow__item-price">{{$p->price}}đ</div>
-                                <div class="productshow__item-action">
-                                    <a class="action__LIKE" href=""><i class="ti-heart"></i></a>
-                                    <a href="p/{$p->id}" class="action__BUY">Mua</a>
+                    <div class="contain">
+                        <div class="grid">
+                            <div class="grid__row">
+                                <div class="grid__column-1">
+                                    
                                 </div>
-                            </a>
-                        </div>
-                    </div>
-                    @endforeach 
-                
-                        </div>
-                    </div>
-                    <!--------------------------MORE------------------------------>
-                    <div class="productshow_more">
-                        <a class="productshow_more-link" href="">Xem thêm
-                            <i class="productshow_more-icon ti-arrow-circle-down"></i></a>
-                    </div>
-                    </div>
-                    </div>
+                                <div class="grid__column-10">
+                                    <div class="productshow">
+                                        <h3 class="productshow__header"><i class="ti-announcement"></i> Sản Phẩm liên quan tới {{$q}} </h3>
+                                        <div class="grid__row">
+                                            @foreach($posts as $p)
+                                            <div class="grid__column-2-4">
+                                                <div class="productshow__item">
+                                                    <a href="p/{{$p->id}}">
+                                                    @php
+                                                        $images = explode('|', $p->image);
+                                                    @endphp
+                                                        <div class="productshow__item-img" style="background-image: url({{URL::to($images[0])}});"></div>
+                                                        <h4 class="productshow__item-name">{{  \Illuminate\Support\Str::limit(($p->title), 25, $end = '...') }}</h4>
+                                                        <div class="productshow__item-price">{{$p->price}}đ</div>
+                                                        <div class="productshow__item-action">
+                                                            <a class="action__LIKE" href=""><i class="ti-heart"></i></a>
+                                                            <a href="p/{$p->id}" class="action__BUY">Mua</a>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    @endforeach 
+                                
+                                        <!-- </div>
+                                    </div> -->
+                                    <!--------------------------MORE------------------------------>
+                                        <div class="productshow_more">
+                                            <a class="productshow_more-link" href="">Xem thêm
+                                                <i class="productshow_more-icon ti-arrow-circle-down"></i></a>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="grid__column-1">
 
+                            </div>
+                        </div>
+                    </div>
                 </div>
         </div>
-        </center>
-    </div>
+        
+</div>
 
 
 @endsection
