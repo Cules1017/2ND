@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ URL::asset('css\base.css');}}">
     <link rel="stylesheet" href="{{ URL::asset('css\register.css');}}"> 
     <link rel="stylesheet" href="./fonts/themify-icons/themify-icons.css">
-    <script src="./js/login-register.js" defer></script>
+    <script src="{{URL::asset('js\login-register.js');}}" defer></script>
         <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <script src="{{ asset('js/app.js') }}" defer></script> -->
 
@@ -83,7 +83,7 @@
                                     </span>
                                 @enderror
                                 <div class="form-group">
-                                    <input class="login-register-info" id="password" type="password" name="password" autocomplete="new-password" placeholder="Nhập mật khẩu ( có ít nhất 5 kí tự )">
+                                    <input class="login-register-info" id="pass" type="password" name="password" autocomplete="new-password" placeholder="Nhập mật khẩu ( có ít nhất 5 kí tự )">
                                     <span class="form-message" id="form-message-pass"></span>
                                     
                                 </div>
@@ -93,7 +93,7 @@
                                     </span>
                                 @enderror
                                 <div class="form-group">
-                                    <input class="login-register-info" id="password-confirm" type="password" name="password_confirmation" autocomplete="new-password" placeholder="Nhập lại mật khẩu">
+                                    <input class="login-register-info" id="repass" type="password" name="password_confirmation" autocomplete="new-password" placeholder="Nhập lại mật khẩu">
                                     <span class="form-message" id="form-message-repass"></span>
                                     
                                 </div>
@@ -106,7 +106,7 @@
                         <input type="submit" class="register-button" value="ĐĂNG KÍ" ><br><br>
                     </div>
                 </form>
-                <script src="./java/login-register.js"></script>
+                <script src="{{URL::asset('js\login-register.js');}}"></script>
                 <script>
                     //mong muon
                     Validator({
@@ -149,8 +149,7 @@
                             <p class="p-5">Đã có tài khoản? <a class="login-button" href="./login ">Đăng nhập</a></p>
                         </center>
                     </div>
-                    <script src="./js/login.js"></script>
-
+                    <script src="{{URL::asset('js\login-register.js');}}"></script>
             </div>
 
         </div>
