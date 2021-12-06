@@ -59,12 +59,13 @@
                                         <li class="header__more-item">
                                             <a href=""><i class="header__more-item-icon ti-help-alt"></i>Trợ giúp</a>
                                         </li>
-                                        <!-- <li class="header__more-item">
-                                            <a href=""><i class="header__more-item-icon ti-settings"></i> Cài đặt</a>
-                                        </li> -->
+                                        <li class="header__more-item">
+                                            <a href=""><i class="header__more-item-icon ti-settings"></i> Giới Thiệu</a>
+                                        </li>
                                         <li class="header__more-item">
                                             <a class="dropdown-item" href="{{ route('login') }}"
                                             >
+                                            
                                                 {{ __('Đăng nhập') }}
                                             </a>
 
@@ -144,13 +145,14 @@
                                         <li class="header__more-item">
                                             <a href=""><i class="header__more-item-icon ti-help-alt"></i>Trợ giúp</a>
                                         </li>
-                                        <!-- <li class="header__more-item">
-                                            <a href=""><i class="header__more-item-icon ti-settings"></i> Cài đặt</a>
-                                        </li> -->
+                                        <li class="header__more-item">
+                                            <a href=""><i class="header__more-item-icon ti-layout-cta-btn-right"></i>Giới Thiệu</a>
+                                        </li> 
                                         <li class="header__more-item">
                                             <a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
+                                            <i class="header__more-item-icon ti-shift-right"></i>
                                                 {{ __('Đăng xuất') }}
                                             </a>
 
