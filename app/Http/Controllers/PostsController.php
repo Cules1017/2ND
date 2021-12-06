@@ -115,8 +115,14 @@ class PostsController extends Controller
     }
     public function saved_posts()
     {
-        $posts = Post::orderBy('created_at', 'desc')->take(20)->get();
-        return view('welcome', compact('posts'));
+        $user=auth()->user();
+        // $id = auth()->user()->saved_posts()->pluck('posts.id');                     
+        // $posts = Post::whereIn('id', $id)->orderBy('id', 'DESC')->take(20)->get();
+        
+        $posts = $user->saved_posts;
+        // dd(); 
+        // $posts = Post::orderBy('created_at', 'desc')->take(20)->get();
+        return view('posts.saved', compact('posts' , 'user'));
     }
 
 

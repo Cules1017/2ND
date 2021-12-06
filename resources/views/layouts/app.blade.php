@@ -156,7 +156,7 @@
                                             <a href="/saved_posts"><i class=""></i>Tin đã lưu</a>
                                         </li>
                                         <li class="header__more-item">
-                                            <a href=""><i class="header__more-item-icon ti-layout-cta-btn-right"></i>Giới Thiệu</a>
+                                            <a href="/introduction"><i class="header__more-item-icon ti-layout-cta-btn-right"></i>Giới Thiệu</a>
                                         </li> 
                                         <li class="header__more-item">
                                             <a class="dropdown-item" href="{{ route('logout') }}"

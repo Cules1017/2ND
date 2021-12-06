@@ -44,7 +44,7 @@ Route::post('/feedback', [App\Http\Controllers\FeedbacksController::class, 'stor
 Route::get('/email', function () {
     return new NewUserWelcomeMail();
 });
-Route::post('/saved_posts', [App\Http\Controllers\PostsController::class, 'saved_posts']);
+Route::get('/saved_posts', [App\Http\Controllers\PostsController::class, 'saved_posts']);
 Route::get('/introduction', [App\Http\Controllers\HomeController::class, 'introduction'])->name('home.introduction'); 
 // Route::post('/follow/{user}', function () {
 //     return ['àl'];
