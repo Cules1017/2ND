@@ -212,7 +212,7 @@
                         </div>
                         @else
                         <div class="header__user">
-                            <img src=" {{auth()->user()->profile->profileImage()}}" alt="" class="header__user-img">
+                            <img src=" {{URL::to(auth()->user()->profile->profileImage())}}" alt="" class="header__user-img">
                             <a href="/profile/{{ auth()->user()->id }}" class="header__user-name">{{auth()->user()->name}} </a>
                         </div>
                         <div class="header__post">

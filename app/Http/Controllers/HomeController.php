@@ -22,7 +22,7 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {   $count= Post::count();
+    {   $count= Post::all()->count();
             
         $pages=ceil($count/10); 
         $active=1;

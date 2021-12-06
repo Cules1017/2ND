@@ -77,18 +77,18 @@
                                             <select name="category" id="category" class="infor_product-category-ali-select">
                                                 <option selected="Default"value="Khong">Danh mục sản phẩm
                                                     </option>
-                                                <option value="Thoi trang">Thời trang</option>
-                                                <option value="Đien thoai">Điện thoại</option>
-                                                <option value="Đồ gia dung">Đồ gia dụng</option>
-                                                <option value="Noi that">Nội thất</option>
-                                                <option value="Nha đat">Nhà đất</option>
+                                                <option value="Thời trang">Thời trang</option>
+                                                <option value="Điện thoại">Điện thoại</option>
+                                                <option value="Đồ gia dụng">Đồ gia dụng</option>
+                                                <option value="Nội thất">Nội thất</option>
+                                                <option value="Nhà Đất">Nhà đất</option>
                                                 <option value="Xe">Xe</option>
-                                                <option value="Nong ghiep">Nông ghiệp</option>
-                                                <option value="Đo cong nghiep">Đồ công nghiệp</option>
-                                                <option value="So thich">Sở thích</option>
-                                                <option value="The thao">Thể thao</option>
-                                                <option value="Thu cung">Thú cưng</option>
-                                                <option value="Hang 0 đong">Hàng 0 đồng</option>
+                                                <option value="Nông nghiệp">Nông nghiệp</option>
+                                                <option value="Đồ công nghiệp">Đồ công nghiệp</option>
+                                                <option value="Sở thích">Sở thích</option>
+                                                <option value="Thể thao">Thể thao</option>
+                                                <option value="Thú cưng">Thú cưng</option>
+                                                <option value="Hàng 0 đồng">Hàng 0 đồng</option>
                                             </select>  
                                             
                                         </div>
