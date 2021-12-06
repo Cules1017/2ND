@@ -67,8 +67,11 @@
                             <h2 class="contain__title-h2">{!!$post->title!!}</h2>      
                             <div>   
                                 <span class="contain__title-price">{!!$post->price!!} đ</span>
-                                <a class="contain__title-follow" href="">Lưu tin <i class="title__header-icon ti-heart">
-                                </i></a>
+                                <!-- <button class="contain__title-follow" href="">Lưu tin 
+                                    <i class="title__header-icon ti-heart">
+                                </i> 
+                            </button> -->
+                            <save-button post-id="{{$post->id}}" saves="{{$saves}}"></save-button>
                             </div>
                                 <div>
                                 <span class="contain__notify-decrip">{!! nl2br(e($post->description))!!} </span>

@@ -65,10 +65,10 @@
                             </div>
                         </div>
                         <div class="productshow">
-                            <h3 class="productshow__header"> Sản Phẩm Đang Đăng </h3>
+                            <h3 class="productshow__header"> Sản Phẩm Đã Lưu</h3>
                             <div class="grid__row">
                                 
-                            @foreach($user->posts as $post)
+                            @foreach($posts as $post)
                       
                                 <div class="grid__column-2-4">
                                     <div class="productshow__item">
@@ -80,15 +80,9 @@
                                             <h4 class="productshow__item-name">{{  \Illuminate\Support\Str::limit(($post->title), 35, $end = '...') }}</h4>
                                             <div class="productshow__item-price">{{$post->price}}đ</div>
                                             <div class="productshow__item-action">
-                                                
-                                                @can('update', $user->profile)
-                                                <a href="/p/{{$post->id}}/edit" class="action__BUY">Sửa</a>
-                                                <a href="/delete/{{$post->id}}" class="action__BUY">Xóa</a>
-                                                @endcan
-                                                @cannot('update', $user->profile)
-                                                <!-- <a class="action__LIKE" href=""><i class="ti-heart"></i></a> -->
+
                                                 <a href="/p/{{$post->id}}" class="action__BUY">Mua</a>
-                                                @endcannot
+                                               
                                             </div>
                                         </a>
                                     </div>
