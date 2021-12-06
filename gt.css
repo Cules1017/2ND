@@ -1,0 +1,46 @@
+.contain {
+    background-image: linear-gradient(#1B2023, #52616B);
+    margin-top: 120px;
+    margin-bottom: 20px;
+}
+
+.title_intro {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.intro-logo {
+    margin: auto;
+    width: 200px;
+    align-items: center;
+}
+
+.title-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin: auto;
+}
+
+.title {
+    display: flex;
+    border-bottom: 1px solid var(--grayish-color);
+}
+
+.content-intro {
+    width: 100%;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.content {
+    font-size: 2rem;
+    letter-spacing: 0;
+    line-height: 25px;
+    padding: 10px;
+}
