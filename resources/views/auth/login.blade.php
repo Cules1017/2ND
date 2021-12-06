@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" href="{{ URL::asset('css\reset.css');}}">
     <link rel="stylesheet" href="{{ URL::asset('css\base.css');}}">
-    <link rel="stylesheet" href="{{ URL::asset('css\login.css');}}"> 
+    <link rel="stylesheet" href="{{ URL::asset('css\login.css');}}">
     <link rel="stylesheet" href="./fonts/themify-icons/themify-icons.css">
     <script src="{{URL::asset('js\login-register.js');}}" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -81,7 +81,9 @@
                             </center>
                             <input type="submit" class="login-button" value="ĐĂNG NHẬP"  ><br><br><br>
                         </form>
-                        <script src="{{URL::asset('js\login-register.js');}}"></script>
+
+                        <script src="./asset/js/login-register.js"></script>
+
                         <script>
                             
                             //mong muon
