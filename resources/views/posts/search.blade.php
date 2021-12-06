@@ -20,7 +20,7 @@
                                 <!-- <div href="#" style="text-decoration: none;color: white;">Tin đăng gần nhất</div> -->
                             </div>
                             <form action="/search/price/" method="GET" role="search">
-                             @csrf
+                             <!-- @csrf -->
                                 <div class="chose-form">
                                     <!-- <label for="price" class="label">Giá cả</label> -->
                                     <select name="price" id="price" class="choice">
@@ -39,8 +39,7 @@
                             </form>
                         </div>
                     </div>
-
-                    
+               
                     <div class="productshow">
                         <h3 class="productshow__header"><i class="ti-announcement"></i> Sản Phẩm Mới Đăng </h3>
                         <div class="grid__row">
@@ -60,6 +59,8 @@
                                             <a href="/p/{{$p->id}}" class="action__BUY">Mua</a>
                                         </div>
                                     </a>
+
+                 
                                 </div>
                             </div>
                             @endforeach 

@@ -18,29 +18,19 @@
                         
                         <div class="FLed-list">
                         
-                            <div class="FLed-box">
-                                <!-- @foreach($user->profile->followers as $follower) -->
-                                
-                                <!-- <li class="FLed-box-info">
-                                    <a href="#" >
-                                        
-                                        <div class="Fled-avatar">
-                                                <img src="#" alt="">
-                                        </div>
-                                        <div class="Fled-user">
-                                                {{$follower->name}}
-                                        </div>
-                                    </a>
-                                </li> -->
-                                
-                                <!-- @endforeach -->
+                            
+                                @foreach($user->profile->followers as $follower) 
+                                <div class="FLed-box">
+                         
                                 <div class="FL-avatar">
-                                    <a href="#"><img src="#" alt=""></a>
+                                    <a href="#"><img height=50 width=50 src="{{URL::to($follower->profile->profileImage())}}" alt=""></a>
                                 </div>
                                 <div class="FL-name">
-                                    <a href="#" style="text-decoration: none" class="name">Quang Minh</a>
+                                    <a href="#" style="text-decoration: none" class="name">{{$follower->name}}</a>
                                 </div>
                             </div>
+                            
+                            @endforeach 
                         </div>
                     </div>
                     
@@ -48,9 +38,20 @@
                     <div class="FLing">
                         <a href="#" class="FLing-link">ĐANG THEO DÕI </a>
                         <div class="FLing-list">
-                            <ul class="FLing-box">
-                                
-                            </ul>
+                        @foreach($user->following as $profile) 
+                                <div class="FLed-box">
+                         
+                                <div class="FL-avatar">
+                                    <a href="#"><img height=50 width=50 src="{{URL::to($profile->profileImage())}}" alt=""></a>
+                                </div>
+                                <div class="FL-name">
+                                    <a href="#" style="text-decoration: none" class="name">{{$profile->user->name}}</a>
+                                </div>
+                            </div>
+                            
+                            @endforeach 
+                            
+
                         </div>
                     </div>
 

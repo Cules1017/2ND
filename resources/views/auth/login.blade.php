@@ -15,8 +15,8 @@
 <body>
     <header class="header">
         <div class="grid">
-            <img class="header-image" src="{{ URL::asset('img\245499403_1043512679749438_9209665840480689390_n.png');}}"
-            alt="">
+        <a href="/"><img class="header-image" src="{{ URL::asset('img\245499403_1043512679749438_9209665840480689390_n.png');}}"
+            alt=""></a>
             <h1 class="header-title">Đăng nhập</h1>
         </div>
     </header>

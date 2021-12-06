@@ -3,8 +3,10 @@
 <head>
     <link rel="stylesheet" href="{{ URL::asset('css/reset.css');}}">
     <link rel="stylesheet" href="{{ URL::asset('css/base.css');}}">
+    <link rel="stylesheet" href="{{ URL::asset('css/pagination.css');}}">
     <link rel="stylesheet" href="{{ URL::asset('css/Post_page.css');}}">
     <link rel="stylesheet" href="{{ URL::asset('css/home_page.css');}}">
+    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
 </head>
 
 
@@ -152,15 +154,15 @@
                      @foreach(($posts) as $p)
                     <div class="grid__column-2-4">
                         <div class="productshow__item">
-                            <a href="p/{{$p->id}}">
+                            <a href="/p/{{$p->id}}">
                             @php
                                 $images = explode('|', $p->image);
                             @endphp
                                 <div class="productshow__item-img" style="background-image: url({{URL::to($images[0])}});"></div>
-                                <h4 class="productshow__item-name">{{  \Illuminate\Support\Str::limit(($p->title), 25, $end = '...') }}</h4>
+                                <h4 class="productshow__item-name">{{  \Illuminate\Support\Str::limit(($p->title), 35, $end = '...') }}</h4>
                                 <div class="productshow__item-price">{{$p->price}}đ</div>
                                 <div class="productshow__item-action">
-                                    <a class="action__LIKE" href=""><i class="ti-heart"></i></a>
+                                    <!-- <a class="action__LIKE" href=""><i class="ti-heart"></i></a> -->
                                     <a href="/p/{{$p->id}}" class="action__BUY">Mua</a>
                                 </div>
                             </a>
@@ -169,10 +171,26 @@
                     @endforeach 
                     
                 </div>
+            
                 <!--------------------------MORE------------------------------>
                 <div class="productshow_more">
-                    <a class="productshow_more-link" href="">Xem thêm
-                                <i class="productshow_more-icon ti-arrow-circle-down"></i></a>
+                    <!-- <a class="productshow_more-link" href="">
+                                 <i class="productshow_more-icon ti-arrow-circle-down"></i></a> -->
+                            <div class="pagination">
+                                @if($active !=1)
+                                <a href="/home/{{$active-1}}">&laquo;</a>
+                                @endif
+                                @for ($i = 1;  $i <= $pages; $i++)
+                                    @if($i==$active)
+                                        <a href="/home/{{$i}}" class="active">{{$i}}</a>
+                                    @else
+                                        <a href="/home/{{$i}}" class="">{{$i}}</a></form>
+                                    @endif
+                                @endfor
+                                @if($active!=$pages)
+                            <a href="/home/{{$active+1}}">&raquo;</a>
+                            @endif
+                            </div>
                 </div>
             </div>
         </div>

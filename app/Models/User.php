@@ -49,7 +49,7 @@ class User extends Authenticatable
 
         static::created(function ($user) {
             $user->profile()->create([
-                'address' =>' ',
+                'address' =>'Chưa cung cấp',
             ]);
 
           
@@ -72,6 +72,9 @@ class User extends Authenticatable
     }
     public function following(){
         return $this->belongsToMany(Profile::class);
+    }
+    public function saved_posts(){
+        return $this->belongsToMany(Post::class);
     }
     
 }

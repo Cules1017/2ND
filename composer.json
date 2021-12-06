@@ -1,4 +1,5 @@
 {
+    
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
@@ -34,6 +35,7 @@
             "Tests\\": "tests/"
         }
     },
+    "post-install-cmd": [ "ln -sr storage/app/public public/storage" ],
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",

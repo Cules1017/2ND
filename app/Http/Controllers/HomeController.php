@@ -22,10 +22,29 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {
-        $posts = Post::orderBy('id', 'DESC')->take(20)->get();
-        return view('welcome', compact('posts'));
+    {   $count= Post::all()->count();
+            
+        $pages=ceil($count/15); 
+        $active=1;
+        $posts = Post::orderBy('id', 'DESC')->paginate(15);
+        return view('welcome', compact('posts','pages','active'));
     }
+
+    public function introduction()
+    {   
+        return view('introduction.show');
+    }
+   
+    public function pages($i)
+    {   $count= Post::count();
+       //dd($i);
+       $pages=ceil($count/15);
+        $active=$i;
+        $posts = Post::orderBy('id', 'DESC')->skip(($i-1)*15)->take(15)->get();
+        return view('welcome', compact('posts','pages','active'));
+    }
+    
+
     public function search(){
          // $q = Request();
         
