@@ -65,7 +65,7 @@
                         </div> -->
                         <div class="contain__title">
                             <h2 class="contain__title-h2">{!!$post->title!!}</h2>      
-                            <div>   
+                            <div class="price_save">   
                                 <span class="contain__title-price">{!!$post->price!!} đ</span>
                                 <!-- <button class="contain__title-follow" href="">Lưu tin 
                                     <i class="title__header-icon ti-heart">
@@ -73,30 +73,23 @@
                             </button> -->
                             <save-button post-id="{{$post->id}}" saves="{{$saves}}"></save-button>
                             </div>
-                                <div>
+                            
+                        </div>    
+                          
+                        <div class="contain__footer">
+                            <div class="descript_f ">
+                                <h2 class="contain__footer-h2 frame_f">Mô tả</h2>
                                 <span class="contain__notify-decrip">{!! nl2br(e($post->description))!!} </span>
                             </div>
-                        </div>    
-                        <div class="contain__title-body">
-                            <div class="contain__title">
-                                <i class="contain__title-fix-icon ti-menu-alt"></i>
-                                <span class="contain__title-fix">Tình trạng: Không  </span>
-                                <i class="contain__title-device-icon ti-shopping-cart-full"></i>
-                                <span class="contain__title-device">Thiết bị: Không</span>  
-                            </div>
-                            <div class="contain__title">
-                                <i class=" contain__title-firm-icon ti-package"></i>
-                                <span class="contain__title-firm">Hãng: Không</span>
-                                <i class="contain__title-from-icon ti-world"></i>
-                                <span class="contain__title-from">Xuất xứ: Không </span>
-                            </div>                  
-                        </div>  
-                        <div class="contain__footer">
-                            <div>
-                                <h2 class="contain__footer-h2">Khu Vực</h2>
+                            <div class="local_f">
+                                <h2 class="contain__footer-h2 frame_f">Khu Vực</h2>
                                 <i class="contain__title-area-icon   ti-location-pin"></i>
                                 <span class="contain__title-area">{{$post->user->profile->address }}</span>
-                            </div>                
+                            </div>  
+                            <div class="share_f">
+                                <h2 class="contain__footer-h2 frame_f">Chia sẻ cho bạn bè</h2>
+                                <button type="button"  onclick="getURL();" ><i class="ti-link"></i></button>
+                            </div>              
                         </div>
                     </div>
                     <div class="grid__column-4">
@@ -139,4 +132,22 @@
                 </div>
             </div>
         </div>
+    <script>
+        function copyToClipboard(text) {
+    if (window.clipboardData) { // Internet Explorer
+        window.clipboardData.setData("Text", text);
+    } else {  
+        unsafeWindow.netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");  
+        const clipboardHelper = Components.classes["@mozilla.org/widget/clipboardhelper;1"].getService(Components.interfaces.nsIClipboardHelper);  
+        clipboardHelper.copyString(text);
+    }
+}
+     
+    function getURL() {
+     str=window.location.href;alert("Đã coppy "+str );
+     copyToClipboard(str);
+    
+    
+    }
+    </script>
 @endsection
