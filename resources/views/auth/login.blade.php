@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ URL::asset('css\base.css');}}">
     <link rel="stylesheet" href="{{ URL::asset('css\login.css');}}">
     <link rel="stylesheet" href="./fonts/themify-icons/themify-icons.css">
-    <script src="./js/login.js"></script>
+    <script src="{{URL::asset('js\login-register.js');}}" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập</title>
 </head>
@@ -61,7 +61,7 @@
 
                                     <div class="form-group">
                                         <input class="login-register-info" type="password" placeholder="Mật khẩu" name="password"
-                                        id="password"  autocomplete="current-password">
+                                        id="pass"  autocomplete="current-password">
                                         <!-- <span class="form-message" id="login-form-message-pass"></span> -->
 <!--                                       
                                         @error('password')
@@ -81,22 +81,25 @@
                             </center>
                             <input type="submit" class="login-button" value="ĐĂNG NHẬP"  ><br><br><br>
                         </form>
+
                         <script src="./asset/js/login-register.js"></script>
+
                         <script>
+                            
                             //mong muon
-                            Validator({
-                                form: '#form-login-register',
-                                formGroupSelector: '.form-group',
-                                errorSelector: '.form-message',
-                                rules: [
-                                Validator.isEmail('#email'),
-                                Validator.minLength('#pass',5),                
-                                ],
-                                onSubmit: function (data){
-                                    console.log(data);
-                                } 
+                            // Validator({
+                            //     form: '#form-login-register',
+                            //     formGroupSelector: '.form-group',
+                            //     errorSelector: '.form-message',
+                            //     rules: [
+                            //     Validator.isEmail('#email'),
+                            //     Validator.minLength('#pass',5),                
+                            //     ],
+                            //     onSubmit: function (data){
+                            //         console.log(data);
+                            //     } 
                         
-                            });
+                            // });
                         </script>
                             <a class="fogot-pas" href="#" style="margin-left: 24px;">Quên mật khẩu</a>
                     </div>
@@ -118,7 +121,7 @@
                     </center>
                     </div>
                 
-                
+                    <script src="{{URL::asset('js\login-register.js');}}"></script>
             </div>
             
         </div>

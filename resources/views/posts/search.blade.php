@@ -39,11 +39,10 @@
                             </form>
                         </div>
                     </div>
-               
+
                     <div class="productshow">
                         <h3 class="productshow__header"><i class="ti-announcement"></i> Sản Phẩm Mới Đăng </h3>
-                        <div class="grid__row">
-                            
+                        <div class="grid__row">                      
                             @foreach(($posts) as $p)
                             <div class="grid__column-2-4">
                                 <div class="productshow__item">
@@ -56,11 +55,9 @@
                                         <div class="productshow__item-price">{{$p->price}}đ</div>
                                         <div class="productshow__item-action">
                                             <a class="action__LIKE" href=""><i class="ti-heart"></i></a>
-                                            <a href="/p/{{$p->id}}" class="action__BUY">Mua</a>
+                                            <a href="/p/{{$p->id}}" class="action__BUY">Mua</a>                   
                                         </div>
-                                    </a>
-
-                 
+                                    </a>                
                                 </div>
                             </div>
                             @endforeach 
