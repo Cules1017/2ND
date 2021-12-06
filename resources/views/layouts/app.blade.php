@@ -62,7 +62,7 @@
                                 <div class="header__more">
                                     <ul class="header__more-list">
                                         <li class="header__more-item">
-                                            <a href="{{ route('login') }}"><i class=""></i>Tin đã lưu</a>
+                                            <a href="{{ route('login') }}"><i class="header__more-item-icon ti-heart"></i>Tin đã lưu</a>
                                         </li>
                                         <li class="header__more-item">
                                             <a href="/introduction"><i class="header__more-item-icon ti-layout-cta-btn-right"></i> Giới Thiệu</a>
@@ -153,7 +153,7 @@
                                 <div class="header__more">
                                     <ul class="header__more-list">
                                         <li class="header__more-item">
-                                            <a href="/saved_posts"><i class=""></i>Tin đã lưu</a>
+                                            <a href="/saved_posts"><i class="header__more-item-icon ti-heart"></i>Tin đã lưu</a>
                                         </li>
                                         <li class="header__more-item">
                                             <a href="/introduction"><i class="header__more-item-icon ti-layout-cta-btn-right"></i>Giới Thiệu</a>
