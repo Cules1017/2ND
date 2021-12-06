@@ -87,9 +87,10 @@ class PostsController extends Controller
     }
 
 
-    public function show(\App\Models\Post $post)
+    public function show(Post $post)
     {
-        return view('posts.show', compact('post'));
+        $saves = (auth()->user()) ? auth()->user()->saved_posts->contains($post->id) : false;
+        return view('posts.show', compact('post','saves'));
     }
 
     public function delete(User $user, Post $post)
@@ -112,5 +113,13 @@ class PostsController extends Controller
         $posts = Post::orderBy('created_at', 'desc')->take(20)->get();
         return view('welcome', compact('posts'));
     }
+    public function saved_posts()
+    {
+        $posts = Post::orderBy('created_at', 'desc')->take(20)->get();
+        return view('welcome', compact('posts'));
+    }
+
+
+    
 }
 

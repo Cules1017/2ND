@@ -77,7 +77,7 @@
                                                 $images = explode('|', $post->image);
                                             @endphp
                                             <div class="productshow__item-img" style="background-image: url({{URL::to($images[0])}});"></div>
-                                            <h4 class="productshow__item-name">{{  \Illuminate\Support\Str::limit(($post->title), 25, $end = '...') }}</h4>
+                                            <h4 class="productshow__item-name">{{  \Illuminate\Support\Str::limit(($post->title), 35, $end = '...') }}</h4>
                                             <div class="productshow__item-price">{{$post->price}}đ</div>
                                             <div class="productshow__item-action">
                                                 
@@ -86,7 +86,7 @@
                                                 <a href="/delete/{{$post->id}}" class="action__BUY">Xóa</a>
                                                 @endcan
                                                 @cannot('update', $user->profile)
-                                                <a class="action__LIKE" href=""><i class="ti-heart"></i></a>
+                                                <!-- <a class="action__LIKE" href=""><i class="ti-heart"></i></a> -->
                                                 <a href="/p/{{$post->id}}" class="action__BUY">Mua</a>
                                                 @endcannot
                                             </div>

@@ -75,10 +75,10 @@
                                         <!-- </div>
                                     </div> -->
                                     <!--------------------------MORE------------------------------>
-                                        <div class="productshow_more">
+                                        <!-- <div class="productshow_more">
                                             <a class="productshow_more-link" href="">Xem thêm
                                                 <i class="productshow_more-icon ti-arrow-circle-down"></i></a>
-                                        </div>
+                                        </div> -->
                                 </div>
                             </div>
                             <div class="grid__column-1">

@@ -24,17 +24,23 @@ class HomeController extends Controller
     public function index()
     {   $count= Post::all()->count();
             
-        $pages=ceil($count/10); 
+        $pages=ceil($count/15); 
         $active=1;
-        $posts = Post::orderBy('id', 'DESC')->paginate(10);
+        $posts = Post::orderBy('id', 'DESC')->paginate(15);
         return view('welcome', compact('posts','pages','active'));
     }
+
+    public function introduction()
+    {   
+        return view('introduction.show');
+    }
+   
     public function pages($i)
     {   $count= Post::count();
        //dd($i);
-       $pages=ceil($count/10);
+       $pages=ceil($count/15);
         $active=$i;
-        $posts = Post::orderBy('id', 'DESC')->skip(($i-1)*10)->take(10)->get();
+        $posts = Post::orderBy('id', 'DESC')->skip(($i-1)*15)->take(15)->get();
         return view('welcome', compact('posts','pages','active'));
     }
     

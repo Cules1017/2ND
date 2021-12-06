@@ -46,6 +46,11 @@
                                         class="header__navbar-icon ti-user"></i>Quản
                                     lý tin</a>
                             </li>
+                            <!-- <li class="header__navbar-item">
+                                <a href="{{ route('login') }}" class="header__navbar-item-link"><i
+                                        class="header__navbar-icon ti-user"></i>Tin đã lưu
+                                    </a>
+                            </li> -->
                             <li class="header__navbar-item header__navbar-item--has-notify">
                                 <div href="" class="header__navbar-item-link"><i
                                         class="header__navbar-icon ti-bell"></i>Thông
@@ -57,10 +62,10 @@
                                 <div class="header__more">
                                     <ul class="header__more-list">
                                         <li class="header__more-item">
-                                            <a href=""><i class="header__more-item-icon ti-help-alt"></i>Trợ giúp</a>
+                                            <a href="{{ route('login') }}"><i class=""></i>Tin đã lưu</a>
                                         </li>
                                         <li class="header__more-item">
-                                            <a href=""><i class="header__more-item-icon ti-settings"></i> Giới Thiệu</a>
+                                            <a href="/introduction"><i class="header__more-item-icon ti-layout-cta-btn-right"></i> Giới Thiệu</a>
                                         </li>
                                         <li class="header__more-item">
                                             <a class="dropdown-item" href="{{ route('login') }}"
@@ -83,6 +88,11 @@
                                         class="header__navbar-icon ti-user"></i>Quản
                                     lý tin</a>
                             </li>
+                            <!-- <li class="header__navbar-item">
+                                <a href="/saved/posts" class="header__navbar-item-link"><i
+                                        class="header__navbar-icon ti-user"></i>Tin đã lưu
+                                    </a>
+                            </li> -->
                             <li class="header__navbar-item header__navbar-item--has-notify">
                                 <a href="" class="header__navbar-item-link"><i
                                         class="header__navbar-icon ti-bell"></i>Thông
@@ -143,7 +153,7 @@
                                 <div class="header__more">
                                     <ul class="header__more-list">
                                         <li class="header__more-item">
-                                            <a href=""><i class="header__more-item-icon ti-help-alt"></i>Trợ giúp</a>
+                                            <a href="/saved_posts"><i class=""></i>Tin đã lưu</a>
                                         </li>
                                         <li class="header__more-item">
                                             <a href=""><i class="header__more-item-icon ti-layout-cta-btn-right"></i>Giới Thiệu</a>

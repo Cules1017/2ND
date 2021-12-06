@@ -19,7 +19,7 @@ use Illuminate\Http\Request;
 //     return view('welcome');
 // });
 Auth::routes();
-
+Route::post('save_post/{post}', 'App\Http\Controllers\SavesController@store');
 Route::post('follow/{user}', 'App\Http\Controllers\FollowsController@store');
 Route::get('follow/{user}/show', 'App\Http\Controllers\FollowsController@index');
 Route::get('/search', [App\Http\Controllers\HomeController::class, 'search'])->name('search');
@@ -44,8 +44,8 @@ Route::post('/feedback', [App\Http\Controllers\FeedbacksController::class, 'stor
 Route::get('/email', function () {
     return new NewUserWelcomeMail();
 });
-
-
+Route::post('/saved_posts', [App\Http\Controllers\PostsController::class, 'saved_posts']);
+Route::get('/introduction', [App\Http\Controllers\HomeController::class, 'introduction'])->name('home.introduction'); 
 // Route::post('/follow/{user}', function () {
 //     return ['àl'];
 //     // return auth()->user()->following()->toggle($user->profile);
