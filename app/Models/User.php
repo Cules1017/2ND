@@ -22,8 +22,8 @@ class User extends Authenticatable
         'email',
         'phone', 
         'password',
-        'provider' => $provider,
-        'provider_id' => $user->id,
+        'provider',
+        'provider_id',
     ];
 
     /**
