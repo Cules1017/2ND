@@ -22,6 +22,7 @@ class SocialAuthController extends Controller
         }else{
             if(URL::previous() != URL::to('login')) Session::put('pre_url', URL::previous());
         }
+        
         return Socialite::driver($provider)->redirect();
     }  
 
