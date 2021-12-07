@@ -5,7 +5,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Intervention\Image\Facades\Image;
-
+use Illuminate\Validation\Rule; 
 class ProfilesController extends Controller
 {
     public function index(User $user)
@@ -46,7 +46,7 @@ class ProfilesController extends Controller
         $this->authorize('update', $user->profile);
         $data = request()->validate([
             'name'=> 'required',
-            'phone' => ['required', 'string', 'max:12'],  
+            'phone' => ['required', 'string', 'max:12',  Rule::unique('users')->ignore($user->id),]
         ]);
         $data1 = request()->validate([
             'image'=>'required|image',

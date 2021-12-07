@@ -93,9 +93,9 @@
                             </div>  
                             <div class="share_f">
                                 <h2 class="contain__footer-h2 frame_f">Chia sẻ cho bạn bè</h2>
-                                <button type="button"  onclick="getURL();" ><i class="ti-link"></i></button>
+                                <button onclick="prompt('Nhấn Ctrl + C',window.location.href)"><i class="ti-link"></i></button>
                             </div>
-
+                            
                             <div class="share_f">
                                 <!-- <h2 for="desciption" class="col-md-4 col-form-label contain__footer-h2 frame_f">Bình Luận</h2> -->
                                 <h2 for="desciption" class="p-5">Bình Luận</h2>
@@ -134,9 +134,6 @@
                                     </form>
 
                                 @endguest   
-
-                                
-
 
                                 @foreach($post->comments as $comment)
                                     <div class="flex p-1">
@@ -219,20 +216,30 @@
         </div>
     <script>
         function copyToClipboard(text) {
-    if (window.clipboardData) { // Internet Explorer
-        window.clipboardData.setData("Text", text);
-    } else {  
-        unsafeWindow.netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");  
-        const clipboardHelper = Components.classes["@mozilla.org/widget/clipboardhelper;1"].getService(Components.interfaces.nsIClipboardHelper);  
-        clipboardHelper.copyString(text);
-    }
-}
+//     if (window.clipboardData) { // Internet Explorer
+//         window.clipboardData.setData("Text", text);
+//     } else {  
+//         unsafeWindow.netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");  
+//         const clipboardHelper = Components.classes["@mozilla.org/widget/clipboardhelper;1"].getService(Components.interfaces.nsIClipboardHelper);  
+//         // clipboardHelper.copyString(text);
+//         navigator.clipboard.writeText("Hello World");
+//     }
+// }
      
-    function getURL() {
-     str=window.location.href;alert("Đã coppy "+str );
-     copyToClipboard(str);
+//     function getURL() {
+//      str=window.location.href;alert("Đã coppy "+str );
+//      copyToClipboard(str);
     
     
-    }
+//     }
+        function getURL(text) {
+        var inputc = document.body.appendChild(document.createElement("input"));
+        inputc.value = window.location.href;
+        inputc.focus();
+        inputc.select();
+        document.execCommand('copy');
+        inputc.parentNode.removeChild(inputc);
+        alert("Đã copy URL");
+        }
     </script>
 @endsection
