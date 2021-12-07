@@ -388,10 +388,28 @@
 }
 
 .btngui {
+    margin-top: 58px;
     background-color: var(--graydark-color);
     color: var(--milk-color);
 }
 
 .btngui:hover {
     color: #999;
+}
+
+.quote-input {
+    background-color: transparent;
+    border: 2px solid #79776e;
+    outline: none;
+    width: 100%;
+    height: 8rem;
+    margin: auto;
+    resize: none;
+    padding: .8rem;
+    font-size: 1.4rem;
+    border-radius: .5rem;
+}
+
+.quote-input:focus {
+    border-color: black;
 }

@@ -116,6 +116,7 @@
                                                             name="description"
                                                             autocomplete="description" 
                                                             id="description" 
+                                                            class="quote-input"
                                                             ></textarea>
 
                                                         @if ($errors->has('description'))
