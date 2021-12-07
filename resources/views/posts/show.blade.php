@@ -71,11 +71,11 @@
                                 </i> 
                             </button> -->
                             @guest
-                            <form action="{{ route('login') }}">
-                            <button class="contain__title-follow" > Lưu </button>
-                            </form>
+                                <form action="{{ route('login') }}">
+                                <button class="contain__title-follow" > Lưu </button>
+                                </form>
                             @else
-                            <save-button post-id="{{$post->id}}" saves="{{$saves}}"></save-button>
+                                <save-button post-id="{{$post->id}}" saves="{{$saves}}"></save-button>
                             @endguest
                             </div>
                             
@@ -94,7 +94,66 @@
                             <div class="share_f">
                                 <h2 class="contain__footer-h2 frame_f">Chia sẻ cho bạn bè</h2>
                                 <button type="button"  onclick="getURL();" ><i class="ti-link"></i></button>
-                            </div>              
+                            </div>
+                            <div class="share_f">
+                                <h2 for="desciption" class="col-md-4 col-form-label contain__footer-h2 frame_f">Bình Luận</h2>
+                                @foreach($post->comments as $comment)
+                                    <div class=" row p-4">
+                                            <div class="col-1 ">   
+                                                <a href="/profile/{{ $comment->user_id }} "> <img src="{{$comment->user->profile->profileImage() }} " class="rounded-circle w-100" style="max-width: 28px;">
+                                                        </a>
+                                            </div>
+                                            <div class="col-11 ">
+                                                    <div class="font-weight-bold">
+                                                        <a href="/profile/{{ $comment->user->id }}">
+                                                            <span class="text-dark">{!! nl2br(e($comment->user->username))!!}</span>
+                                                        </a>     
+                                                    </div>
+                                                    <div class="text-dark">{!! nl2br(e($comment->description))!!}</div> 
+                                            </div>
+                                            
+
+                                    </div>
+                                @endforeach    
+
+
+                            @guest
+
+                            @else
+
+                                <form action="/sent/{{$post->id}}" enctype="multipart/form-data" method="post">
+
+                                        @csrf
+                                        <div class="form-group_row">
+                                                        
+                                                        
+                                                        <textarea id="description"
+                                                        rows="2" cols="80"
+                                                        class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}"
+                                                        name="description"
+                                                        autocomplete="description" autofocus
+                                                        id="description" 
+                                                        ></textarea>
+
+                                                    @if ($errors->has('description'))
+                                                        <span class="invalid-feedback valid_err_text" role="alert">
+                                                            <strong>Vui lòng điền tin nhắn</strong>
+                                                        </span>
+                                                    @endif
+                                                </div>
+                                                
+                                                <div class="">
+                                                    <button class="btn btn-primary">Gởi</button>
+                                                </div>
+                                
+
+                                                
+                                            
+                                            
+                                </form>
+
+                            @endguest   
+                            </div>           
                         </div>
                     </div>
                     <div class="grid__column-4">
@@ -107,12 +166,13 @@
                                 <div class="contain__titleru">
                                     <!-- <div class="avt-img" style="background-image: url({{URL::to($post->user->profile->profileImage())}});"></div> -->
                                     <div class="avt-img" ><img class="user__image" src="{{URL::to($post->user->profile->profileImage())}}" alt=""></div>
-                                    <h2 class="contain__title-h2">{{$post->user->name }}</h2>
+                                    <h2 class="contain__title-h2 Name_usertitle">{{$post->user->name }}</h2>
+                                </div>
                                 <div>
                                     <!-- <i class=" contain__user-online ti-eye">  Đang hoạt động</i> -->
-                                    <a class="contain__user-page" href="/profile/{{$post->user->profile->user_id}}">Xem trang </a>
+                                    <a class="contain__user-page" href="/profile/{{$post->user->profile->user_id}}"><span>Xem trang</span> </a>
                                 </div>
-                               
+                               <div class="infomation-user">
                                 <span class="contain__number">
                                     SDT:{!!$post->user->phone!!}
                                 </span>
@@ -120,6 +180,7 @@
                                     <i class="contain__user-chaticon ti-comments"></i>
                                     <span class="contain__user-comment">CHAT VỚI NGƯỜI BÁN</span>
                                 </div> -->
+                                
                                 <div class="contain__user-calendar">
                                     <i class="contain__calendar-icon ti-calendar"></i>
                                     <span class="contain__user-dayjoin">Ngày tham gia :</span>
@@ -129,7 +190,7 @@
                                     <i class="contain__location-icon ti-location-pin"></i>
                                     <span class="contain__user-add">Địa chỉ:</span>
                                     <span class="contain__user-adds">{!!$post->user->profile->address !!}</span>
-                                </div> 
+                                </div> </div>
                             </div>
                         </div>
                     </div>
@@ -139,65 +200,8 @@
 
                 <div>
                                    
-                     <div class=""><h2>Comments</h2></div>
-                        
-                        @foreach($post->comments as $comment)
-                            <div class=" ">
-                                    <div class=" ">   
-                                        <a href="/profile/{{ $comment->user_id }} "> <img src="{{URL::to($comment->user->profile->profileImage())}}" class="rounded-circle w-100" style="max-width: 28px;">
-                                                </a>
-                                    </div>
-                                    <div class="">
-                                            <div class="font-weight-bold">
-                                                <a href="/profile/{{ $comment->user->id }}">
-                                                    <span class="text-dark">{!! nl2br(e($comment->user->name))!!}</span>
-                                                </a>     
-                                            </div>
-                                            <div class="text-dark">{!! nl2br(e($comment->description))!!}</div> 
-                                    </div>
-                                    
-
-                            </div>
-                        @endforeach    
-
-                    </div>
-                    @guest
-
-                    @else
-                        <form action="/sent/{{$post->id}}" enctype="multipart/form-data" method="post">
-                    
-                                @csrf
-
-                                <div class="row">
-                                    <div class="col-8 offset-2">
-
-                                        <div class="form-group row">
-                                                <label for="desciption" class="col-md-4 col-form-label">Add comment</label>
-                                                
-                                                <textarea id="description"
-                                                rows="2" cols="80"
-                                                class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}"
-                                                name="description"
-                                                autocomplete="description" autofocus
-                                                id="description" 
-                                                ></textarea>
-
-                                            @if ($errors->has('description'))
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>Vui lòng điền tin nhắn</strong>
-                                                </span>
-                                            @endif
-                                        </div>
-                                        
-                                        <div class="">
-                                            <button class="btn btn-primary">Sent</button>
-                                        </div>
-                                    
-                                    </div>
-                                </div>
-                        </form>
-                    </div>
-                    @endguest
+                     
+                   
 
 
         </div>
