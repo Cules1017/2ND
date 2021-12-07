@@ -69,10 +69,17 @@
 
 .contain__user .contain__user-page {
     padding: 2px 6px;
+    width: 100%;
     border: 1px solid orange;
     border-radius: 100px;
     text-decoration: none;
     color: orange;
+    margin: 5px;
+    display: flex;
+}
+
+.contain__user-page>span {
+    margin: auto;
 }
 
 .contain__user {
@@ -120,8 +127,15 @@
     font-weight: bolder;
 }
 
-.contain__user-calendar {
+.contain__number {
+    margin: auto;
+}
+
+.contain__user-calendar,
+.contain__user-add {
     line-height: 30px;
+    font-size: 1.4rem;
+    color: var(--text-color);
 }
 
 .contain__user-location {
@@ -168,14 +182,31 @@
     display: flex;
 }
 
+.Name_usertitle {
+    font-size: 2.2rem;
+    font-weight: 800;
+    padding-left: 6px;
+    line-height: 20px;
+}
+
+.infomation-user {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .user__image {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 1000px;
 }
 
 .contain__headeri {
     margin-left: 20px;
+}
+
+.form-group_row {
+    width: 100%;
 }
 
 

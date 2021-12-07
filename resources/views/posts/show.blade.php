@@ -95,18 +95,19 @@
                                 <h2 class="contain__footer-h2 frame_f">Chia sẻ cho bạn bè</h2>
                                 <button type="button"  onclick="getURL();" ><i class="ti-link"></i></button>
                             </div>
+
                             <div class="share_f">
                                 <h2 for="desciption" class="col-md-4 col-form-label contain__footer-h2 frame_f">Bình Luận</h2>
                                 @foreach($post->comments as $comment)
                                     <div class=" row p-4">
                                             <div class="col-1 ">   
-                                                <a href="/profile/{{ $comment->user_id }} "> <img src="{{$comment->user->profile->profileImage() }} " class="rounded-circle w-100" style="max-width: 28px;">
+                                                <a href="/profile/{{ $comment->user_id }} "> <img src="{{URL::to($comment->user->profile->profileImage())}} " class="rounded-circle w-100" style="max-width: 28px;">
                                                         </a>
                                             </div>
                                             <div class="col-11 ">
                                                     <div class="font-weight-bold">
                                                         <a href="/profile/{{ $comment->user->id }}">
-                                                            <span class="text-dark">{!! nl2br(e($comment->user->username))!!}</span>
+                                                            <span class="text-dark">{!! nl2br(e($comment->user->name))!!}</span>
                                                         </a>     
                                                     </div>
                                                     <div class="text-dark">{!! nl2br(e($comment->description))!!}</div> 
@@ -117,43 +118,41 @@
                                 @endforeach    
 
 
-                            @guest
+                                @guest
 
-                            @else
+                                @else
 
-                                <form action="/sent/{{$post->id}}" enctype="multipart/form-data" method="post">
+                                    <form action="/sent/{{$post->id}}" enctype="multipart/form-data" method="post">
 
-                                        @csrf
-                                        <div class="form-group_row">
-                                                        
-                                                        
-                                                        <textarea id="description"
-                                                        rows="2" cols="80"
-                                                        class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}"
-                                                        name="description"
-                                                        autocomplete="description" autofocus
-                                                        id="description" 
-                                                        ></textarea>
+                                            @csrf
+                                            <div class="form-group_row">
+                                                            
+                                                            
+                                                            <textarea id="description"
+                                                            rows="2" cols="80"
+                                                            class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}"
+                                                            name="description"
+                                                            autocomplete="description" autofocus
+                                                            id="description" 
+                                                            ></textarea>
 
-                                                    @if ($errors->has('description'))
-                                                        <span class="invalid-feedback valid_err_text" role="alert">
-                                                            <strong>Vui lòng điền tin nhắn</strong>
-                                                        </span>
-                                                    @endif
-                                                </div>
-                                                
-                                                <div class="">
-                                                    <button class="btn btn-primary">Gởi</button>
-                                                </div>
-                                
+                                                        @if ($errors->has('description'))
+                                                            <span class="invalid-feedback valid_err_text" role="alert">
+                                                                <strong>Vui lòng điền tin nhắn</strong>
+                                                            </span>
+                                                        @endif
+                                                    </div>
+                                                    
+                                                    <div class="">
+                                                        <button class="btn btn-primary">Gởi</button>
+                                                    </div>
+                                          
+                                    </form>
 
-                                                
-                                            
-                                            
-                                </form>
-
-                            @endguest   
+                                @endguest   
                             </div>           
+
+                          
                         </div>
                     </div>
                     <div class="grid__column-4">
