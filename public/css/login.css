@@ -1,81 +1,76 @@
-
-.header-image{
+.header-image {
     width: 200px;
-    height:80px;
+    height: 80px;
 }
 
-.header-title{
-    display:inline-block;
+.header-title {
+    display: inline-block;
     margin-left: 25px;
     font-size: 3rem;
-    
 }
-.contain{
+
+.contain {
     width: 100%;
     height: 550px;
     background-color: var(--grayish-color);
-
 }
 
-.logo-box{
-    width:50%;
-    height:500px;
-    background-color:var(--grayish-color);
+.logo-box {
+    width: 50%;
+    height: 500px;
+    background-color: var(--grayish-color);
     display: block;
     position: relative;
     float: left;
 }
 
-.contain-image{
+.contain-image {
     display: block;
     align-items: center;
-    
-    margin-left: auto; 
+    margin-left: auto;
     margin-right: auto;
-    width:60%;
-    height:30%;
-    position:absolute ;
+    width: 60%;
+    height: 30%;
+    position: absolute;
     top: 90px;
-    left:100px;
-    right:100px;
+    left: 100px;
+    right: 100px;
 }
 
-.contain-title{
+.contain-title {
     font-size: 3rem;
-    display: flex ;
+    display: flex;
     align-items: center;
-    position:absolute ;
+    position: absolute;
     top: 270px;
-    
-    right:100px;
+    right: 100px;
 }
 
-.form-box{
-    width:50%;
+.form-box {
+    width: 50%;
     height: 500px;
     position: relative;
-    float:right;
+    float: right;
 }
 
-.form-box-box{
+.form-box-box {
     border-radius: 3px;
     height: 400px;
     width: 350px;
     background-color: white;
     position: absolute;
-    top:50px;
-    left:0px;
+    top: 50px;
+    left: 0px;
 }
 
-.login-register-title{
-    margin-top:35px; 
+.login-register-title {
+    margin-top: 35px;
     margin-left: 25px;
     font-weight: 700;
     font-size: 16px;
 }
 
-.login-register-info{
-    
+.login-register-info {
     border-radius: 3px;
     margin-bottom: 20px;
     width: 300px;
@@ -83,28 +78,32 @@
     color: black;
 }
 
-.form-message{
+.form-message {
     display: block;
     font-size: 12px;
     color: red;
     position: absolute;
     left: 26px;
 }
+
+
 /*Phan css của login: BEGIN*/
-#login-form-message-email{
+
+#login-form-message-email {
     position: absolute;
-    top: 115px ;
+    top: 115px;
 }
 
-#login-form-message-pass{
+#login-form-message-pass {
     position: absolute;
-    top: 170px ;
+    top: 170px;
 }
-::placeholder{
+
+::placeholder {
     opacity: 0.5;
 }
 
-.eye-icon{
+.eye-icon {
     font-size: 2rem;
     height: 31px;
     width: 30px;
@@ -113,12 +112,11 @@
     right: 28px;
 }
 
-.login-button:hover{
-   
+.login-button:hover {
     background-color: var(--grayish-color);
 }
 
-.login-button{
+.login-button {
     text-decoration: none;
     display: inline-block;
     text-align: center;
@@ -128,106 +126,105 @@
     border-radius: 3px;
     width: 330px;
     height: 36px;
-    background-color:var(--graydark-color);
-    color:white;
-    position: absolute ;
-    left:10px;
+    background-color: var(--graydark-color);
+    color: white;
+    position: absolute;
+    left: 10px;
     font-weight: 700;
 }
 
 h5 {
     opacity: 0.5;
-    width: 300px; 
-    text-align: center; 
-    border-bottom: 1px solid #000; 
+    width: 300px;
+    text-align: center;
+    border-bottom: 1px solid #000;
     line-height: 0.1em;
-    margin-left: 25px; ;
- } 
- 
- h5 span { 
-     background:#fff; 
-     padding:0 10px; 
- }
+    margin-left: 25px;
+    ;
+}
 
-.login-button-facebook{
+h5 span {
+    background: #fff;
+    padding: 0 10px;
+}
+
+.login-button-facebook {
     border-radius: 2px;
     width: 90px;
     height: 38px;
     background-color: rgb(84, 84, 202);
     position: absolute;
-    left:80px;
+    left: 80px;
     bottom: 74px;
-
 }
 
-.login-button-google{
+.login-button-google {
     border-radius: 2px;
     width: 78px;
     height: 38px;
     background-color: rgb(84, 84, 202);
     position: absolute;
-    right:90px;
+    right: 90px;
     bottom: 74px;
 }
 
-.button-facebook:hover{
+.button-facebook:hover {
     background-color: var(--grayish-color);
-    
-
 }
 
-.button-google:hover{
+.button-google:hover {
     background-color: var(--grayish-color);
-    
 }
 
-.button-link{
+.button-link {
     margin-top: 6.6px;
     font-size: 1.4rem;
     display: flex;
     align-items: center;
-    color:white;
+    color: white;
     text-decoration: none;
 }
 
-.button-link-icon-face{
+.button-link-icon-face {
     font-size: 2.5rem;
-    color:var(--white-color);
+    color: var(--white-color);
 }
 
-.button-link-icon-gg{
+.button-link-icon-gg {
     margin-left: 6px;
     font-size: 2.5rem;
-    color:var(--white-color);
+    color: var(--white-color);
 }
 
-.register{
+.register {
     margin-top: 30px;
-    
 }
-.register-button{
+
+.register-button {
     color: blue;
     display: inline;
 }
+
+
 /*Ket thuc phan css cua login : END*/
 
 
 /*-----FOOTER--------*/
-.footer{
+
+.footer {
     margin-top: 0px;
     margin-bottom: 30px;
     height: 100px;
     width: 100%;
-  
 }
 
-.footer-icon{
+.footer-icon {
     margin-top: 16px;
     margin-left: 24px;
     opacity: 0.8;
 }
 
-.footer-icon-box{
+.footer-icon-box {
     width: 30px;
     height: 30px;
     display: inline-block;
@@ -235,19 +232,16 @@ h5 {
     border-bottom-left-radius: 50%;
 }
 
-.footer-icon-box:hover{
-    
+.footer-icon-box:hover {
     background-color: rgb(0, 0, 0);
 }
 
-.footer-link{
+.footer-link {
     text-decoration: none;
-    color:var(--grayish-color);
-    
+    color: var(--grayish-color);
 }
 
-.footer-button{
-    
+.footer-button {
     color: var(--grayish-color);
     margin-top: 8px;
     margin-left: 0px;
@@ -256,14 +250,13 @@ h5 {
     justify-content: center;
 }
 
-.footer-button:hover{
-    color:white; 
+.footer-button:hover {
+    color: white;
 }
 
-.footer-bottom{
+.footer-bottom {
     font-size: 14px;
     opacity: 0.8;
     text-decoration: none;
     color: var(--grayish-color);
 }
-
