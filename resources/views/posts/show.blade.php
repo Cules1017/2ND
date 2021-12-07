@@ -120,14 +120,14 @@
 
                                                         @if ($errors->has('description'))
                                                             <span class="invalid-feedback valid_err_text" role="alert">
-                                                                <strong>Vui lòng điền tin nhắn</strong>
+                                                                <strong>Vui lòng nhập bình luận</strong>
                                                             </span>
                                                         @endif
                                                         
                                                     </div>
                                                     
                                                     <div class="">
-                                                        <button class="pl p-2">Gửi </button>
+                                                        <button class="pl p-2 btngui">Gửi </button>
                                                     </div>
                                           
                                     </form>

@@ -1,24 +1,31 @@
 /*Column 6*/
-.p-5{
+
+.p-5 {
     margin-top: 40px;
 }
-.p-1{
+
+.p-1 {
     margin-top: 20px;
 }
-.p-2{
+
+.p-2 {
     margin-top: 10px;
 }
-.flex{
+
+.flex {
     display: flex;
 }
-.pl-3{
-    margin-left:30px;
+
+.pl-3 {
+    margin-left: 30px;
 }
-.pt{
-    margin-top:6px;
+
+.pt {
+    margin-top: 6px;
 }
-.pl{
-    margin-left:20px;
+
+.pl {
+    margin-left: 20px;
 }
 
 .contain__produce .produce__img {
@@ -378,4 +385,13 @@
     to {
         opacity: 1
     }
+}
+
+.btngui {
+    background-color: var(--graydark-color);
+    color: var(--milk-color);
+}
+
+.btngui:hover {
+    color: #999;
 }
