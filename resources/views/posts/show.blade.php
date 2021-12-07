@@ -101,17 +101,21 @@
                                 @foreach($post->comments as $comment)
                                     <div class=" row p-4">
                                             <div class="col-1 ">   
-                                                <a href="/profile/{{ $comment->user_id }} "> <img src="{{URL::to($comment->user->profile->profileImage())}} " class="rounded-circle w-100" style="max-width: 28px;">
+                                                
+                                                        <div class="font-weight-bold colcmtcart">
+                                                            <a href="/profile/{{ $comment->user_id }} "> <img src="{{URL::to($comment->user->profile->profileImage())}} " class="rounded-circle w-100" style="max-width: 28px;">
                                                         </a>
-                                            </div>
-                                            <div class="col-11 ">
-                                                    <div class="font-weight-bold">
-                                                        <a href="/profile/{{ $comment->user->id }}">
-                                                            <span class="text-dark">{!! nl2br(e($comment->user->name))!!}</span>
-                                                        </a>     
+                                                        <a href="/profile/{{ $comment->user->id }}" class="text-dark_tile">
+                                                            <span class="text-dark caiiiias">{!! nl2br(e($comment->user->name))!!}</span>
+                                                        </a> 
+                                                        <div class="chen">111</div>    
                                                     </div>
-                                                    <div class="text-dark">{!! nl2br(e($comment->description))!!}</div> 
+                                                    <div class="col-11 cotain_cmt">
+                                                    
+                                                    <span class="text-dark context_comment">{!! nl2br(e($comment->description))!!}</span> 
                                             </div>
+                                            </div>
+                                            
                                             
 
                                     </div>
