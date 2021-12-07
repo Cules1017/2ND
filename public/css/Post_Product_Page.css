@@ -31,14 +31,15 @@
 .contain__user-img {
     justify-content: center;
     align-content: center;
-    border-radius: 100px;
     flex: 1;
     display: flex;
     margin: auto;
 }
 
 .contain__user-img img {
-    height: 80px;
+    height: 100px;
+    width: 100px;
+    border-radius: 1000px;
 }
 
 .contain__title {
