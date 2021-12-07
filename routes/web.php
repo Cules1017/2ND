@@ -46,6 +46,9 @@ Route::get('/email', function () {
 });
 Route::get('/saved_posts', [App\Http\Controllers\PostsController::class, 'saved_posts']);
 Route::get('/introduction', [App\Http\Controllers\HomeController::class, 'introduction'])->name('home.introduction'); 
+
+Route::get('/auth/{provider}',[App\Http\Controllers\SocialAuthController::class, 'redirectToProvider']);
+Route::get('/auth/{provide}/callback',[App\Http\Controllers\SocialAuthController::class, 'handleProviderCallback']);
 // Route::post('/follow/{user}', function () {
 //     return ['àl'];
 //     // return auth()->user()->following()->toggle($user->profile);
