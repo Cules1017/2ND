@@ -111,7 +111,7 @@
                             
                         </div>
                         <div class="login-button-google">
-                            <a href="#" class="button-link"><i class="button-link-icon-gg ti-google "></i>google</a> 
+                            <a href="{{env('APP_URL').'auth/google'}}" class="button-link"><i class="button-link-icon-gg ti-google "></i>google</a> 
                         </div>
                         
                     </div>

@@ -25,7 +25,7 @@
                         <div class="contain__user">
                             <div class="contain__user-img"><img src="{{URL::to($user->profile->profileImage())}}" alt=""></div>
                             <div class="contain__title">
-                                <h2 class="contain__title-h2">{{$user->name}}</h2>      
+                                <h2 class="contain__title-h2">{!!$user->name!!}</h2>      
                                 <div>   
                                     <a href="/follow/{{$user->id}}/show"><span class="contain__title-follow-number">{{$user->profile->followers->count()}}</span>
                                     <span class="contain__title-follow">Người theo dõi</span></a>
@@ -55,12 +55,12 @@
                                 <div class="contain__title-calendar">
                                     <i class="contain__title-usericon ti-calendar"></i>
                                     <span class="contain__title-user-dayjoin">Ngày tham gia :</span>
-                                    <span class="contain__title-user-dayjoins">{{$user->created_at}}</span>
+                                    <span class="contain__title-user-dayjoins">{!!$user->created_at!!}</span>
                                 </div>
                                 <div class="contain__title-add">
                                     <i class="contain__title-usericon ti-location-pin"></i>
                                     <span class="contain__title-user-add">Địa chỉ:</span>
-                                    <span class="contain__title-user-adds">{{$user->profile->address}}</span>
+                                    <span class="contain__title-user-adds">{!!$user->profile->address!!}</span>
                                 </div>                   
                             </div>
                         </div>
@@ -77,8 +77,8 @@
                                                 $images = explode('|', $post->image);
                                             @endphp
                                             <div class="productshow__item-img" style="background-image: url({{URL::to($images[0])}});"></div>
-                                            <h4 class="productshow__item-name">{{  \Illuminate\Support\Str::limit(($post->title), 35, $end = '...') }}</h4>
-                                            <div class="productshow__item-price">{{$post->price}}đ</div>
+                                            <h4 class="productshow__item-name">{!!  \Illuminate\Support\Str::limit(($post->title), 35, $end = '...') !!}</h4>
+                                            <div class="productshow__item-price">{!!$post->price!!}đ</div>
                                             <div class="productshow__item-action">
 
                                                 <a href="/p/{{$post->id}}" class="action__BUY">Mua</a>
