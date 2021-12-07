@@ -7,7 +7,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
     </style>
 
-@extends('layouts.app')
+@extends('layouts.app2')
 @section('content')
     <div class="container"> 
         <div class="grid">

@@ -20,8 +20,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<div id="app" class="main">
-<!-- <div  class="main"> -->
+<!-- <div id="app" class="main"> -->
+<div  class="main">
         <header class="header">
             <div class="grid">
                 <div class="grid__header">
