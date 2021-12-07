@@ -49,7 +49,7 @@ class SocialAuthController extends Controller
     public function findOrCreateUser($user, $provider)
     {
         $authUser = User::where('provider_id', $user->id)->first();
-        if ($authUser) {
+        if ($authUser!='') {
             return $authUser;
         }
         $newUser=User::create([
