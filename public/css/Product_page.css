@@ -160,6 +160,24 @@
     font-size: 1.6rem;
 }
 
+.avt-img {
+    border-radius: 50;
+}
+
+.contain__titleru {
+    display: flex;
+}
+
+.user__image {
+    width: 70px;
+    height: 70px;
+    border-radius: 1000px;
+}
+
+.contain__headeri {
+    margin-left: 20px;
+}
+
 
 /* --------------------------SLIDER------------------------- */
 

@@ -1,4 +1,3 @@
-
 <head>  
 <title>Trang Sản Phẩm</title>
 
@@ -94,11 +93,15 @@
                     </div>
                     <div class="grid__column-4">
                         <div class="contain__user">
-                            <div class="contain__user-img" ><img class="user__img" src="{{URL::to($post->user->profile->profileImage())}}" alt=""></div>
-                            <div class="contain__header">
+                            
+                            <!-- <div class="contain__user-img" ><img class="user__img" src="{{URL::to($post->user->profile->profileImage())}}" alt=""></div> -->
+                            <div class="contain__headeri">
 
-                                <div class="contain__title">
+                                <div class="contain__titleru">
+                                    <!-- <div class="avt-img" style="background-image: url({{URL::to($post->user->profile->profileImage())}});"></div> -->
+                                    <div class="avt-img" ><img class="user__image" src="{{URL::to($post->user->profile->profileImage())}}" alt=""></div>
                                     <h2 class="contain__title-h2">{{$post->user->name }}</h2>
+                                    
                                 </div>
                                 <div>
                                     <!-- <i class=" contain__user-online ti-eye">  Đang hoạt động</i> -->
