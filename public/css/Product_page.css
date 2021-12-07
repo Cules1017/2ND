@@ -1,4 +1,25 @@
 /*Column 6*/
+.p-5{
+    margin-top: 40px;
+}
+.p-1{
+    margin-top: 20px;
+}
+.p-2{
+    margin-top: 10px;
+}
+.flex{
+    display: flex;
+}
+.pl-3{
+    margin-left:30px;
+}
+.pt{
+    margin-top:6px;
+}
+.pl{
+    margin-left:20px;
+}
 
 .contain__produce .produce__img {
     background-color: #000;
