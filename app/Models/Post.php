@@ -13,7 +13,7 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
     public function comments(){
-        return $this->hasMany(Comment::class);//->orderBy('created_at', 'DESC');
+        return $this->hasMany(Comment::class)->orderBy('created_at', 'DESC');
     }
     public function category(){
         return $this->belongsTo(Category::class);

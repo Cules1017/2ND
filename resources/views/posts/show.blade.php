@@ -32,7 +32,7 @@
                                 $count=1;
                             @endphp
                             @foreach($images as $image)
-                                <div class="mySlides fade" >
+                                <div class="mySlides" >
                                     <img src="{{URL::to($image)}}" width="600" height="350">
                                 </div>
                             @endforeach
@@ -97,46 +97,24 @@
                             </div>
 
                             <div class="share_f">
-                                <h2 for="desciption" class="col-md-4 col-form-label contain__footer-h2 frame_f">Bình Luận</h2>
-                                @foreach($post->comments as $comment)
-                                    <div class=" row p-4">
-                                            <div class="col-1 ">   
-                                                
-                                                        <div class="font-weight-bold colcmtcart">
-                                                            <a href="/profile/{{ $comment->user_id }} "> <img src="{{URL::to($comment->user->profile->profileImage())}} " class="rounded-circle w-100" style="max-width: 28px;">
-                                                        </a>
-                                                        <a href="/profile/{{ $comment->user->id }}" class="text-dark_tile">
-                                                            <span class="text-dark caiiiias">{!! nl2br(e($comment->user->name))!!}</span>
-                                                        </a> 
-                                                        <div class="chen">111</div>    
-                                                    </div>
-                                                    <div class="col-11 cotain_cmt">
-                                                    
-                                                    <span class="text-dark context_comment">{!! nl2br(e($comment->description))!!}</span> 
-                                            </div>
-                                            </div>
-                                            
-                                            
-
-                                    </div>
-                                @endforeach    
-
-
+                                <!-- <h2 for="desciption" class="col-md-4 col-form-label contain__footer-h2 frame_f">Bình Luận</h2> -->
+                                <h2 for="desciption" class="p-5">Bình Luận</h2>
+                                
                                 @guest
 
                                 @else
 
-                                    <form action="/sent/{{$post->id}}" enctype="multipart/form-data" method="post">
+                                    <form  action="/sent/{{$post->id}}" enctype="multipart/form-data"  class="flex" method="post">
 
                                             @csrf
                                             <div class="form-group_row">
                                                             
                                                             
                                                             <textarea id="description"
-                                                            rows="2" cols="80"
-                                                            class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}"
+                                                            rows="2" cols="70"
+                                                            autofocus
                                                             name="description"
-                                                            autocomplete="description" autofocus
+                                                            autocomplete="description" 
                                                             id="description" 
                                                             ></textarea>
 
@@ -145,15 +123,45 @@
                                                                 <strong>Vui lòng điền tin nhắn</strong>
                                                             </span>
                                                         @endif
+                                                        
                                                     </div>
                                                     
                                                     <div class="">
-                                                        <button class="btn btn-primary">Gởi</button>
+                                                        <button class="pl p-2">Gửi </button>
                                                     </div>
                                           
                                     </form>
 
                                 @endguest   
+
+                                
+
+
+                                @foreach($post->comments as $comment)
+                                    <div class="flex p-1">
+                                            <div class="col-1 ">   
+                                                
+                                                        <div class="flex">
+                                                            <a href="/profile/{{ $comment->user_id }} "> <img src="{{URL::to($comment->user->profile->profileImage())}} " class="rounded-circle w-100" style="max-width: 28px;">
+                                                            <a href="/profile/{{ $comment->user->id }}" class="text-dark_tile">
+                                                            <div class="text-dark caiiiias pt">{!! nl2br(e($comment->user->name))!!}</div>
+                                                        </a>
+                                                        </a>  
+                                            </div>
+                                                    <div class="col-11 cotain_cmt">
+                                                    
+                                                    <span class="text-dark context_comment pl-3">{!! nl2br(e($comment->description))!!}</span> 
+                                            </div>
+                                            </div>
+                                            
+                                            
+
+                                    </div>
+                                @endforeach    
+
+    
+
+                                
                             </div>           
 
                           
