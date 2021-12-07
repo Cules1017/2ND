@@ -142,6 +142,53 @@
     line-height: 2px;
 }
 
+.col-1 {}
+
+.caiiiias {
+    padding-bottom: 3px;
+}
+
+.rounded-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 1000px;
+}
+
+.text-dark_tile {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    margin-left: 5px;
+    font-weight: 600;
+}
+
+
+/*.colcmtcart {
+    margin-left: 27px;
+    margin-bottom: 5px;
+}*/
+
+.cotain_cmt {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    display: block;
+}
+
+.chen {
+    width: 100%;
+}
+
+.context_comment {
+    background-color: rgb(209, 203, 203);
+    padding: 8px;
+    word-wrap: break-word;
+    float: left;
+    border-bottom-left-radius: 17px;
+    border-bottom-right-radius: 17px;
+    border-top-right-radius: 17px;
+}
+
 
 /*******************************************************/
 
