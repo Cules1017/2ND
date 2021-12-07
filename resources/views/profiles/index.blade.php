@@ -27,10 +27,10 @@
                             <div class="contain__title">
                                 <h2 class="contain__title-h2">{{$user->name}}</h2>      
                                 <div>   
-                                    <a href="/follow/{{$user->id}}/show"><span class="contain__title-follow-number">{{$user->profile->followers->count()}}</span>
-                                    <span class="contain__title-follow">Người theo dõi</span></a>
-                                    <a href="/follow/{{$user->id}}/show"><span class="contain__title-follower-number">{{$user->following->count()}}</span>
-                                    <span class="contain__title-follower">Đang theo dõi</span></a>
+                                    <a href="/follow/{{$user->id}}/show"class="contain__title-follow-number FLNUM"><span >{{$user->profile->followers->count()}}</span>
+                                    <span class="contain__title-follow FLNUMfm">Người theo dõi</span></a>
+                                    <a href="/follow/{{$user->id}}/show"class="contain__title-follower-number FLNUM"><span >{{$user->following->count()}}</span>
+                                    <span class="contain__title-follower FLNUMfm">Đang theo dõi</span></a>
                                 </div>
                                 @can('update', $user->profile) 
                                 <div>

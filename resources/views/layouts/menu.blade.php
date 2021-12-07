@@ -70,8 +70,8 @@
                                         <li class="header__more-item">
                                             <a class="dropdown-item" href="{{ route('login') }}"
                                             >
-                                            
-                                                {{ __('Đăng nhập') }}
+                                            <i class="header__more-item-icon ti-write"></i>
+                                                {{ __('Đăngnhập') }}
                                             </a>
 
                                             <form id="login-form" action="{{ route('login') }}" method="POST" style="display: none;">

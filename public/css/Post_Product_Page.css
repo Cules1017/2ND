@@ -221,3 +221,14 @@
     background-color: #999;
     color: black;
 }
+
+.FLNUM {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+.FLNUMfm {
+    color: var(--text-color);
+    font-weight: 300;
+}
