@@ -104,7 +104,7 @@
                                             <div class="tilte-selects">Tiêu đề cho sản phẩm:<span class="Obligatory">*</span></div>
                                             <input type="text" name="title" id="title" class="infor_product-category-ali-select " 
                                             placeholder="Tiêu đề cho sản phẩm (bắt buộc)"
-                                            value="{{ old('title') ?? $post->title }}"
+                                            value="{!! old('title') ?? $post->title !!}"
                                             autocomplete="title" autofocus>
                                             
                                             @error('title')
@@ -120,7 +120,7 @@
                                             </div>
 
                                             <input type="number" name="price" id="price" class="infor_product-category-ali-select " placeholder="Giá sản phẩm (bắt buộc)"
-                                            value="{{ old('price') ?? $post->price }}"
+                                            value="{!! old('price') ?? $post->price !!}"
                                             autocomplete="price" autofocus>
                                             <label for="Price_product" class="Label_unit">VND</label>
 
@@ -149,7 +149,7 @@
                                                 Hãy mô tả thật rõ ràng để sản phẩm của bạn được bán nhanh nhất"
                                                 name="description"
                                             value=""
-                                            autocomplete="description" autofocus>{{ old('description') ?? e($post->description) }}</textarea>
+                                            autocomplete="description" autofocus>{!! old('description') ?? e($post->description) !!}</textarea>
                                             @error('description')
                                             <span class="valid_err_text">
                                                     Yêu cầu điền thông tin chi tiết

@@ -154,16 +154,16 @@
                      @foreach(($posts) as $p)
                     <div class="grid__column-2-4">
                         <div class="productshow__item">
-                            <a href="/p/{{$p->id}}">
+                            <a href="/p/{!!$p->id!!}">
                             @php
                                 $images = explode('|', $p->image);
                             @endphp
                                 <div class="productshow__item-img" style="background-image: url({{URL::to($images[0])}});"></div>
                                 <h4 class="productshow__item-name">{{  \Illuminate\Support\Str::limit(($p->title), 35, $end = '...') }}</h4>
-                                <div class="productshow__item-price">{{$p->price}}đ</div>
+                                <div class="productshow__item-price">{!!$p->price!!} đ</div>
                                 <div class="productshow__item-action">
                                     <!-- <a class="action__LIKE" href=""><i class="ti-heart"></i></a> -->
-                                    <a href="/p/{{$p->id}}" class="action__BUY">Mua</a>
+                                    <a href="/p/{!!$p->id!!}" class="action__BUY">Mua</a>
                                 </div>
                             </a>
                         </div>
