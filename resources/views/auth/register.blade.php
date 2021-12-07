@@ -11,7 +11,8 @@
     <script src="{{URL::asset('js\login-register.js');}}" defer></script>
         <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <script src="{{ asset('js/app.js') }}" defer></script> -->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="{{ asset('js/xss.js') }}" ></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng kí</title>
