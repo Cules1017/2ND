@@ -117,7 +117,7 @@
                                                 <img src="{{URL::to ($images[0])}}" alt="" class="header__notify-img">
                                                 <div class="header__notify-info">
                                                       
-                                                    <span class="header__notify-name">{{$post->title}}</span>
+                                                    <span class="header__notify-name">{!!$post->title!!}</span>
                                                     <span class="header__notify-decrip">{!! nl2br(e($post->description));!!}</span>
                                                 </div>
                                             </a>
@@ -225,7 +225,7 @@
                         @else
                         <div class="header__user">
                             <img   src=" {{URL::to(auth()->user()->profile->profileImage())}}"   height=40 width=40 alt="" class="header__user-img">
-                            <a href="/profile/{{ auth()->user()->id }}" class="header__user-name">{{auth()->user()->name}} </a>
+                            <a href="/profile/{{ auth()->user()->id }}" class="header__user-name">{!!auth()->user()->name!!} </a>
                         </div>
                         <div class="header__post">
                             <a class="header__post-btn" href="/post/create">

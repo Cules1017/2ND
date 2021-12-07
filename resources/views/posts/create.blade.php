@@ -96,7 +96,7 @@
                                             <div class="tilte-selects">Tiêu đề cho sản phẩm:<span class="Obligatory">*</span></div>
                                             <input type="text" name="title" id="title" class="infor_product-category-ali-select " 
                                             placeholder="Tiêu đề cho sản phẩm (bắt buộc)"
-                                            value="{{ old('title') }}"
+                                            value="{!! old('title') !!}"
                                             autocomplete="title" autofocus>
                                             <span class="valid_err_text"></span>
                                             
@@ -114,7 +114,7 @@
                                             </div>
 
                                             <input type="number" name="price" id="price" class="infor_product-category-ali-select " placeholder="Giá sản phẩm (bắt buộc)"
-                                            value="{{ old('price') }}"
+                                            value="{!! old('price') !!}"
                                             autocomplete="price" autofocus>
                                             <label for="Price_product" class="Label_unit">VND</label>
 
@@ -141,7 +141,7 @@
                                                 Hãy mô tả thật rõ ràng để sản phẩm của bạn được bán nhanh nhất"
                                                 name="description"
                                             
-                                            autocomplete="description" autofocus>{{ old('description') }}</textarea>
+                                            autocomplete="description" autofocus>{!! old('description') !!}</textarea>
                                             @error('description')
                                             <span class="valid_err_text">
                                                     Không được để thiếu
