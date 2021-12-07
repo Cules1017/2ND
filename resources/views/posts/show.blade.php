@@ -159,7 +159,11 @@
                         @endforeach    
 
                     </div>
+                    @guest
+
+                    @else
                         <form action="/sent/{{$post->id}}" enctype="multipart/form-data" method="post">
+                    
                                 @csrf
 
                                 <div class="row">
@@ -191,7 +195,7 @@
                                 </div>
                         </form>
                     </div>
-
+                    @endguest
 
 
         </div>
