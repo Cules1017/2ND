@@ -10,9 +10,9 @@
 </style>
 </head>
 
-@extends('layouts.app2')
+@extends('layouts.app')
 
-@section('content')
+@section('content') 
 
     <div class="container">
         <div class="grid">
