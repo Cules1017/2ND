@@ -1,9 +1,8 @@
-
-.grid__column-2{
-    background-image: linear-gradient(var(--graydark-color),var(--grayish-color))
-
+.grid__column-2 {
+    background-image: linear-gradient(var(--graydark-color), var(--grayish-color))
 }
-.header__user{
+
+.header__user {
     height: 40px;
     width: 180px;
     margin-left: 30px;
@@ -11,41 +10,39 @@
     align-items: center;
 }
 
-.header__user-img{
+.header__user-img {
     height: 40px;
-    
 }
 
-.header__user-name{
+.header__user-name {
     font-size: 1.6rem;
     text-decoration: none;
-    margin-left:4px ;
+    margin-left: 4px;
     color: var(--white-color);
 }
-.contain__user{
-    
+
+.contain__user {
     margin-top: 140px;
     display: flex;
     box-shadow: 0 1px 5px 0 black;
     border-radius: 2px;
-    
 }
+
 .contain__user-img {
     justify-content: center;
     align-content: center;
-    border-radius: 100px;
     flex: 1;
     display: flex;
     margin: auto;
 }
+
 .contain__user-img img {
-    height: 80px;
-
-
-
+    height: 100px;
+    width: 100px;
+    border-radius: 1000px;
 }
-.contain__title{
 
+.contain__title {
     margin-top: 15px;
     margin-left: 15px;
     font-size: 1.6rem;
@@ -53,7 +50,8 @@
     line-height: 36px;
     color: var(--text-color)
 }
-.contain__title-h2{
+
+.contain__title-h2 {
     margin-bottom: 5px;
 }
 
@@ -65,19 +63,23 @@
     font-weight: 700;
     color: var(--text-color)
 }
+
 .contain__title-fixuser:hover
-/*.contain__tilte-fixmore:hover*/{
+/*.contain__tilte-fixmore:hover*/
+
+{
     background-color: #999;
     color: white;
     border: 1px solid #999;
 }
+
 .contain__tilte-fixmore {
-    
     margin-left: 10px;
     font-weight: 700;
     text-decoration: none;
 }
-.contain__title-usericons{
+
+.contain__title-usericons {
     border: 1px solid black;
     border-radius: 100px;
     padding-left: 8px;
@@ -85,48 +87,53 @@
     padding-top: 5px;
     padding-bottom: 5px;
 }
-.contain__title-usericons:hover{
+
+.contain__title-usericons:hover {
     background-color: #999;
-    color:var(--white-color);
+    color: var(--white-color);
 }
 
 .contain__title-follower-number {
     margin-left: 50px;
 }
+
 .contain__title-follow-number,
 .contain__title-follower-number {
     font-weight: 700;
 }
+
 .contain__title-usericon {
     color: rgb(180, 177, 177);
 }
-.contain__title-user-dayjoin, 
+
+.contain__title-user-dayjoin,
 .contain__title-user-add {
     color: rgb(180, 177, 177);
 }
+
 .contain__title-add {
     margin-bottom: 15px;
 }
+
+
 /*------------------CSS Tin mới đăng------------------------------*/
-.productshow{
-    border-radius:4px;
+
+.productshow {
+    border-radius: 4px;
     border: #999 3px solid;
     margin-top: 12px;
-    background-color:var(--white-color); 
+    background-color: var(--white-color);
 }
 
-.productshow__header{
+.productshow__header {
     font-size: 1.6rem;
     font-weight: 700;
     padding-left: 20px;
     padding-top: 18px;
     padding-bottom: 20px;
-
-
 }
 
-.productshow__item{
-
+.productshow__item {
     margin-top: 10px;
     padding-top: 2px;
     background-color: rgb(243, 243, 243);
@@ -136,17 +143,18 @@
     transition: transform linear 0.1s;
     will-change: transform;
 }
-.productshow__item>a{
+
+.productshow__item>a {
     display: block;
     text-decoration: none;
-
 }
-.productshow__item:hover{
+
+.productshow__item:hover {
     transform: translateY(-1px);
-    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.3);  
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
-.productshow__item-img{
+.productshow__item-img {
     padding-top: 100%;
     margin: 10px;
     background-repeat: no-repeat;
@@ -154,7 +162,7 @@
     background-position: center;
 }
 
-.productshow__item-name{
+.productshow__item-name {
     font-size: 1.4rem;
     font-weight: 600;
     color: var(--text-color);
@@ -168,19 +176,19 @@
     -webkit-line-clamp: 2;
 }
 
-.productshow__item-price{
+.productshow__item-price {
     color: tomato;
     font-size: 1.4rem;
     padding-left: 10px;
 }
 
-.productshow__item-action{
+.productshow__item-action {
     display: flex;
     justify-content: space-between;
     padding: 10px;
 }
 
-.action__LIKE{
+.action__LIKE {
     font-size: 1.6rem;
     line-height: 32px;
     padding: 2px;
@@ -192,11 +200,11 @@
 }
 
 .action__LIKE:hover,
-.action__LIKE:focus{
+.action__LIKE:focus {
     color: red;
 }
 
-.action__BUY{
+.action__BUY {
     width: 72px;
     height: 32px;
     line-height: 32px;
@@ -208,8 +216,8 @@
     text-decoration: none;
     color: var(--white-color);
 }
-.action__BUY:hover{
+
+.action__BUY:hover {
     background-color: #999;
     color: black;
 }
-

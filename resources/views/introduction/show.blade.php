@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <link rel="stylesheet" href="{{ URL::asset('css/reset.css');}}">
-    <link rel="stylesheet" href=" {{ URL::asset('css/base.css');}}">
     <link rel="stylesheet" href=" {{ URL::asset('css/gt.css');}}">
-
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giới Thiệu</title>
 </head>
 
-<body>
+
+@extends('layouts.app')
+
+@section('content')
     <div class="contain">
         <div class="grid">
 
@@ -23,10 +15,10 @@
 
                 </div>
                 <div class="grid__column-10">
-                    <div class="title_intro">
+                    <!-- <div class="title_intro">
                        <a href="/"> <img src="{{ URL::asset('img\logo_web_offi.png');}}" alt="" class="intro-logo"></a>
 
-                    </div>
+                    </div> -->
                     <div class="content-intro">
                         <div class="title">
                             <h2 class="title-content">Giới Thiệu 2ndhand Shop</h2>
@@ -50,6 +42,5 @@
             </div>
         </div>
     </div>
-</body>
 
-</html>
+    @endsection
