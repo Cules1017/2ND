@@ -23,42 +23,49 @@ class PostsController extends Controller
 
     public function store(Request $request)
     {
-        $data= request()->validate([
-            'title'=> 'required',
-            'description'=>'required',
-            'image' => 'required',
-            // 'image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'category'=>'required',
-            'price'=>'required|integer|between:0,100000000000',
-        ]);
-        
-        if($files = $request->file('image')){
-            foreach ($files as $file) {
-                $image_name = $file->store('');
-                $ext = strtolower($file->getClientOriginalExtension());
-                // $image_full_name = $image_name.'.'.$ext;
-                $upload_path = 'posts/';
-                $image_url = $upload_path.$image_name;
-                $file->move($upload_path, $image_name);
-                $image[] = $image_url;
+        try {
+            $data= request()->validate([
+                'title'=> 'required',
+                'description'=>'required',
+                'image' => 'required',
+                // 'image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'category'=>'required',
+                'price'=>'required|integer|between:0,100000000000',
+            ]);
+            
+            if($files = $request->file('image')){
+                foreach ($files as $file) {
+                    $image_name = $file->store('');
+                    $ext = strtolower($file->getClientOriginalExtension());
+                    // $image_full_name = $image_name.'.'.$ext;
+                    $upload_path = 'posts/';
+                    $image_url = $upload_path.$image_name;
+                    $file->move($upload_path, $image_name);
+                    $image[] = $image_url;
+                }
             }
-        }
-
-
-        Post::insert([
-            'user_id'=> auth()->user()->id,
-            'title' => $data['title'],
-            'description'=> $data['description'],
-            'image' => implode('|', $image),
-            'category'=>$data['category'],
-            'price'=>$data['price'],
-        ]);
-
-        return redirect('/profile/' . auth()->user()->id);
+    
+    
+            Post::insert([
+                'user_id'=> auth()->user()->id,
+                'title' => $data['title'],
+                'description'=> $data['description'],
+                'image' => implode('|', $image),
+                'category'=>$data['category'],
+                'price'=>$data['price'],
+            ]);
+    
+            return redirect('/profile/' . auth()->user()->id);
+            } catch (\Exception $error) {
+                        return back();
+                    }
+        
     }
 
     public function update(Post $post, Request $request){
-        $this->authorize('update', $post);
+
+        try {
+            $this->authorize('update', $post);
         $data= request()->validate([
             'title'=> 'required',
             'description'=>'required',
@@ -84,6 +91,10 @@ class PostsController extends Controller
           $post->update(array_merge(  $data, ));
         
         return redirect("/p/{$post->id}");
+            } catch (\Exception $error) {
+                        return back();
+                    }
+        
     }
 
 
