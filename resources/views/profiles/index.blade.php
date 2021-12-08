@@ -27,7 +27,7 @@
                             <div class="contain__title">
                                 <h2 class="contain__title-h2">{{$user->name}}</h2>      
                                 <div>   
-                                    <a href="/follow/{{$user->id}}/show"class="contain__title-follow-number FLNUM"><span >{{$user->profile->followers->count()}}</span>
+                                    <a href="/follow/{{$user->id}}/show"class="contain__title-follow-number FLNUM"><span id="ngtheo">{{$user->profile->followers->count()}}</span>
                                     <span class="contain__title-follow FLNUMfm">Người theo dõi</span></a>
                                     <a href="/follow/{{$user->id}}/show"class="contain__title-follower-number FLNUM"><span >{{$user->following->count()}}</span>
                                     <span class="contain__title-follower FLNUMfm">Đang theo dõi</span></a>
@@ -44,9 +44,9 @@
                                     @guest
                                     
                                     @else 
-                                        <div >
-                                            <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button>
-                                            <!-- <a class="contain__tilte-fixmore" style="--hover-color: green"href="">
+                                        <div id="btn-fl">
+                                            <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}" onclick="clickFL();"></follow-button>
+                                            <!-- <a id="contain__tilte-fixmore" style="--hover-color: green"href="">
                                                 <i class="contain__title-usericons ti-more"></i> 
                                             </a>   -->
                                         </div>
@@ -106,5 +106,27 @@
 
 
         </div>
+        <script language="javascript">
+            
+           
+            
+            
+            function clickFL(e)
+            { let num=document.getElementById("ngtheo");
+            let fl=document.getElementsByClassName("contain__title-fixuser");
+            let ab=num.innerText;
+            let a=fl[0].outerText;
+            if(a=='Theo dõi'){
+               ab=Number(ab)+1;
+              num.innerHTML=ab; 
+            }
+            else{
+                ab=Number(ab)-1;
+              num.innerHTML=ab;
+            }
+              
+            };
+
+        </script>
 
 @endsection
