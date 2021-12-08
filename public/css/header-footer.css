@@ -239,6 +239,12 @@
     color: var(--white-color);
 }
 
+.header__user-name:hover {
+    color: #999;
+    cursor: pointer;
+    font-weight: 800;
+}
+
 .header__post {
     width: 142px;
     height: 40px;
