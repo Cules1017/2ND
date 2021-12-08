@@ -44,7 +44,7 @@ class ProfilesController extends Controller
 
     public function update(User $user , Request $request){
 
-        try {
+        
             $this->authorize('update', $user->profile);
         $data = request()->validate([
             'name'=> 'required',
@@ -78,9 +78,7 @@ class ProfilesController extends Controller
        auth()->user()->update(array_merge(
         $data,));
         return redirect("/profile/{$user->id}");
-            } catch (\Exception $error) {
-                        return back();
-                    }
+            
         
     }
 }

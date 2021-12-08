@@ -9,8 +9,6 @@ class CommentsController extends Controller
 {
     public function store(Post $post)
     {
-
-        try {
             $data= request()->validate([
                 'description'=>'required',
             ]);
@@ -22,10 +20,7 @@ class CommentsController extends Controller
             ]);
        
             return redirect('/p/' . $post->id);
-            } catch (\Exception $error) {
-                        return back();
-                    }
-        
+
     }
 
 

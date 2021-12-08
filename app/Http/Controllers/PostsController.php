@@ -23,7 +23,7 @@ class PostsController extends Controller
 
     public function store(Request $request)
     {
-        try {
+        
             $data= request()->validate([
                 'title'=> 'required',
                 'description'=>'required',
@@ -56,15 +56,12 @@ class PostsController extends Controller
             ]);
     
             return redirect('/profile/' . auth()->user()->id);
-            } catch (\Exception $error) {
-                        return back();
-                    }
-        
+
     }
 
     public function update(Post $post, Request $request){
 
-        try {
+        
             $this->authorize('update', $post);
         $data= request()->validate([
             'title'=> 'required',
@@ -91,10 +88,7 @@ class PostsController extends Controller
           $post->update(array_merge(  $data, ));
         
         return redirect("/p/{$post->id}");
-            } catch (\Exception $error) {
-                        return back();
-                    }
-        
+          
     }
 
 
