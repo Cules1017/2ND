@@ -23,7 +23,7 @@
                                 <div class="FLed-box">
                          
                                 <div class="FL-avatar">
-                                    <a href="#"><img height=50 width=50 src="{{URL::to($follower->profile->profileImage())}}" alt=""></a>
+                                    <a href="#"><img height=50 width=50 src="{{URL::to($follower->profile->profileImage())}}" class="IMGaVT" alt=""></a>
                                 </div>
                                 <div class="FL-name">
                                     <a href="#" style="text-decoration: none" class="name">{{$follower->name}}</a>
@@ -42,7 +42,7 @@
                                 <div class="FLed-box">
                          
                                 <div class="FL-avatar">
-                                    <a href="#"><img height=50 width=50 src="{{URL::to($profile->profileImage())}}" alt=""></a>
+                                    <a href="#"><img height=50 width=50 src="{{URL::to($profile->profileImage())}}" class="IMGaVT" alt=""></a>
                                 </div>
                                 <div class="FL-name">
                                     <a href="#" style="text-decoration: none" class="name">{{$profile->user->name}}</a>
