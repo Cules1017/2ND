@@ -174,8 +174,8 @@
 
                                 <div class="contain__titleru">
                                     <!-- <div class="avt-img" style="background-image: url({{URL::to($post->user->profile->profileImage())}});"></div> -->
-                                    <div class="avt-img" ><img class="user__image" src="{{URL::to($post->user->profile->profileImage())}}" alt=""></div>
-                                    <h2 class="contain__title-h2 Name_usertitle">{{$post->user->name }}</h2>
+                                    <a href="/profile/{{$post->user->profile->user_id}}"><div class="avt-img" ><img class="user__image" src="{{URL::to($post->user->profile->profileImage())}}" alt=""></div></a>
+                                    <a class="text-dark_tile" href="/profile/{{$post->user->profile->user_id}}"><h2 class="contain__title-h2 Name_usertitle">{{$post->user->name }}</h2></a>
                                 </div>
                                 <div>
                                     <!-- <i class=" contain__user-online ti-eye">  Đang hoạt động</i> -->
