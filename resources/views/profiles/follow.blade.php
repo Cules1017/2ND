@@ -24,7 +24,7 @@
                          
                                 <div class="FL-avatar">
 
-                                    <a href="/profile/{{$follower->profile->user_id}}"><img height=50 width=50 src="{{URL::to($follower->profile->profileImage())}}" alt=""></a>
+                                    <!-- <a href="/profile/{{$follower->profile->user_id}}"><img height=50 width=50 src="{{URL::to($follower->profile->profileImage())}}" alt=""></a> -->
 
                                     <a href="#"><img height=50 width=50 src="{{URL::to($follower->profile->profileImage())}}" class="IMGaVT" alt=""></a>
 
@@ -47,7 +47,7 @@
                          
                                 <div class="FL-avatar">
 
-                                    <a href="/profile/{{$profile->user_id}}"><img  height=50 width=50 src="{{URL::to($profile->profileImage())}}" alt=""></a>
+                                    <!-- <a href="/profile/{{$profile->user_id}}"><img  height=50 width=50 src="{{URL::to($profile->profileImage())}}" alt=""></a> -->
 
                                     <a href="#"><img height=50 width=50 src="{{URL::to($profile->profileImage())}}" class="IMGaVT" alt=""></a>
 
