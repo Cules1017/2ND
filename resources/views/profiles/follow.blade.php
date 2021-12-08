@@ -14,7 +14,7 @@
                 <div class="contain-gird">
                     <div class="contain-header">Bạn bè</div>
                     <div class="FLed">
-                        <a href="#" class="FLed-link">ĐƯỢC THEO DÕI </a>
+                        <div href="#" class="FLed-link">ĐƯỢC THEO DÕI </div>
                         
                         <div class="FLed-list">
                         
@@ -23,10 +23,10 @@
                                 <div class="FLed-box">
                          
                                 <div class="FL-avatar">
-                                    <a href="#"><img height=50 width=50 src="{{URL::to($follower->profile->profileImage())}}" alt=""></a>
+                                    <a href="/profile/{{$follower->profile->user_id}}"><img height=50 width=50 src="{{URL::to($follower->profile->profileImage())}}" alt=""></a>
                                 </div>
                                 <div class="FL-name">
-                                    <a href="#" style="text-decoration: none" class="name">{{$follower->name}}</a>
+                                    <a href="/profile/{{$follower->profile->user_id}}" class="text-dark_tile" style="text-decoration: none" class="name">{!!$follower->name!!}</a>
                                 </div>
                             </div>
                             
@@ -36,16 +36,16 @@
                     
 
                     <div class="FLing">
-                        <a href="#" class="FLing-link">ĐANG THEO DÕI </a>
+                        <div  class="FLing-link">ĐANG THEO DÕI </div>
                         <div class="FLing-list">
                         @foreach($user->following as $profile) 
                                 <div class="FLed-box">
                          
                                 <div class="FL-avatar">
-                                    <a href="#"><img height=50 width=50 src="{{URL::to($profile->profileImage())}}" alt=""></a>
+                                    <a href="/profile/{{$profile->user_id}}"><img  height=50 width=50 src="{{URL::to($profile->profileImage())}}" alt=""></a>
                                 </div>
                                 <div class="FL-name">
-                                    <a href="#" style="text-decoration: none" class="name">{{$profile->user->name}}</a>
+                                    <a href="/profile/{{$profile->user_id}}" class="text-dark_tile " style="text-decoration: none" class="name">{!!$profile->user->name!!}</a>
                                 </div>
                             </div>
                             
