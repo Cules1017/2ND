@@ -68,7 +68,7 @@
 
                                             @if ($errors->has('phone'))
                                                 <span class="valid_err_text" role="alert">
-                                                    <strong>Số điện thoại không chính xác</strong>
+                                                    <strong>Số điện thoại không chính xác hoặc đã được sử dụng</strong>
                                                 </span>
                                             @endif
                                         

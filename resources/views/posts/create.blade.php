@@ -84,7 +84,7 @@
                                                 <option value="Nhà Đất">Nhà đất</option>
                                                 <option value="Xe">Xe</option>
                                                 <option value="Nông nghiệp">Nông nghiệp</option>
-                                                <option value="Đồ công nghiệp">Đồ công nghiệp</option>
+                                                <option value="Đồ công nghệ">Đồ công nghệ</option>
                                                 <option value="Sở thích">Sở thích</option>
                                                 <option value="Thể thao">Thể thao</option>
                                                 <option value="Thú cưng">Thú cưng</option>

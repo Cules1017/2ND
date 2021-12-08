@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Post;
 use Request;
-
+use DB;
 class HomeController extends Controller
 {
     /**
@@ -50,7 +50,7 @@ class HomeController extends Controller
         
           $q = Request::get('q');
           if($q){
-                $posts = Post::where('category','like','%'.$q.'%')->orWhere('title','like','%'.$q.'%')->orderBy('id', 'desc')->paginate(20);
+                $posts = Post::where(DB::raw('lower(category)'), 'like', '%' . strtolower($q) . '%')->orWhere(DB::raw('lower(title)'), 'like', '%' . strtolower($q) . '%')->orderBy('id', 'desc')->paginate(20);
                 return view('posts.search' , compact('posts',  'q'));}
          else   {
              $q=" ";
@@ -67,7 +67,7 @@ class HomeController extends Controller
             if($max_price == 0){$min_price = 0;$max_price = 1000000000000;}
             // dd($max_price);
             if($q){
-            $posts = Post::where('category','like','%'.$q.'%')->orWhere('title','like','%'.$q.'%')->orderBy('id', 'desc')->paginate(20);
+            $posts = Post::where(DB::raw('lower(category)'), 'like', '%' . strtolower($q) . '%')->orWhere(DB::raw('lower(title)'), 'like', '%' . strtolower($q) . '%')->orderBy('id', 'desc')->paginate(20);
             $posts= $posts->whereBetween('price', [$min_price, $max_price]);
             return view('posts.search' , compact('posts' ,  'q'));}
             else{
