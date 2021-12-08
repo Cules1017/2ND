@@ -15,6 +15,7 @@
 
                 </div>
                 <div class="grid__column-10">
+                    
                     <!-- <div class="title_intro">
                        <a href="/"> <img src="{{ URL::asset('img\logo_web_offi.png');}}" alt="" class="intro-logo"></a>
 
@@ -33,6 +34,13 @@
                                 này.
                             </p>
                             <p> Sản phẩm mà bạn không cần đến vẫn có thể trở thành vật quý giá với người khác. Đừng do dự mà hãy gửi thông tin về sản phẩm của bạn ngay bây giờ!<3</p>
+                            
+                            <h4 title-content>Video giới thiệu</h4>
+                            <center ><iframe width="840" height="473" src="https://www.youtube.com/embed/W-P4K7b-GdU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </center>
+                            <h4 title-content>Vị trí</h4>
+                            <center ><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8078.714162163025!2d106.80067867847012!3d10.88208188802969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d8a5f4e477e9%3A0x29d5aeb365cee20b!2sKTX%20Khu%20A%20%C4%90HQG%20TP.HCM!5e0!3m2!1svi!2s!4v1638987524376!5m2!1svi!2s" width="840" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </center>
                         </div>
                     </div>
                 </div>
