@@ -9,17 +9,23 @@ class CommentsController extends Controller
 {
     public function store(Post $post)
     {
-        $data= request()->validate([
-            'description'=>'required',
-        ]);
 
-
-        auth()->user()->comments()->create([
-            'description'=> $data['description'],
-            'post_id'=>$post->id,
-        ]);
-   
-        return redirect('/p/' . $post->id);
+        try {
+            $data= request()->validate([
+                'description'=>'required',
+            ]);
+    
+    
+            auth()->user()->comments()->create([
+                'description'=> $data['description'],
+                'post_id'=>$post->id,
+            ]);
+       
+            return redirect('/p/' . $post->id);
+            } catch (\Exception $error) {
+                        return back();
+                    }
+        
     }
 
 
